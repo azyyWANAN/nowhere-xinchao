@@ -44,6 +44,7 @@ def render():
     j = _load("journey.json") or {}
     pcs = _load("postcards.json") or {"items": []}
     lands = _load("landings.json") or {}
+    ear = _load("radio_ear.json") or {}
 
     pos = j.get("pos", [0, 0])
     lat, lon = pos[0], pos[1]
@@ -53,6 +54,15 @@ def render():
     t = env.get("terrain", {})
     sky = env.get("sky", {})
     radio = j.get("radio_station") or {}
+    ear_st = ear.get("located") or {}
+    ear_radio = ear_st.get("station") or {}
+    if ear_radio.get("name"):
+        radio = {**radio, **{k: v for k, v in ear_radio.items() if v}}
+    heard = ear.get("heard") or {}
+    hear_html = ""
+    if heard.get("text"):
+        hear_html = (f'<div class="ear"><div class="ear-h">&#128266; 随行耳朵 · 他听见了</div>'
+                     f'<p>{esc(heard["text"])}</p><div class="ear-m">{esc(heard.get("at", ""))} · 现场截听 {heard.get("sec", 20)} 秒</div></div>')
 
     env_at = j.get("env_at") or j.get("landed_at") or ""
     upd = ""
@@ -189,6 +199,8 @@ def render():
             .replace("__BIOME__", esc(biome_cn))
             .replace("__SCENES__", scenes_html)
             .replace("__RADIO__", esc(radio.get("name", "—")))
+            .replace("__RFREQ__", esc(radio.get("freq", "")))
+            .replace("__EAR__", hear_html)
             .replace("__RGEN__", esc(radio.get("genre", "")))
             .replace("__RHOME__", esc(radio.get("homepage", "#")))
             .replace("__SKY__", esc(sky_html))

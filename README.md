@@ -14,6 +14,21 @@
 | 📬 手机自动收货 | 在手机 Termux 上跑，把新明信片图片和旅行日记自动拉回手机 | `fetch_cards.py` |
 | 🗃️ 旅行日记归档 | 在服务器上跑，把明信片和场景文字增量归档成 `travel-diary.md`，可写进 ombrebrain 信桶 | `travel_archiver.py` |
 
+## 随行耳朵（电台）
+
+`radio_ear.py` 给旅程配"走到哪，听哪的电台"：
+
+```bash
+python3 radio_ear.py locate 30.243 120.15   # 按坐标找当地台（国内通讯录优先，否则查 radio-browser 全球黄页）
+python3 radio_ear.py catch 20            # 截当前电台直播流 20 秒 → hear/ear_now.mp3
+python3 radio_ear.py note "听见了什么"    # 把 AI 听后的转述写进 radio_ear.json，网页上展示
+python3 radio_ear.py status
+```
+
+- 国内电台不公开流地址，靠 `CN_BOOK` 通讯录（蜻蜓FM live 编号），已录杭州西湖之声，按城市往里加
+- 国外电台走 radio-browser.info 全球黄页，按经纬度查当地台，无需手动收集
+- 网页"此刻看到的"卡片会显示本城电台+频率，有 `heard` 时展示"随行耳朵 · 他听见了"
+
 ## 先决条件
 
 先按乌有乡原仓库的说明把旅行本体跑起来，让它落盘档案文件（默认 `~/.nowhere/` 下的 `journey.json`、`postcards.json`、`landings.json`）。三件套读的就是这些文件，所以**没有乌有乡，三件套没有数据可展示**。

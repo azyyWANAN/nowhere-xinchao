@@ -59,6 +59,11 @@
 
   /* 头顶的天空 */
   .sky{font-size:12.5px;color:#EAF2F0;margin-top:10px;padding:0 4px;}
+  .rfreq{font-size:11px;color:#8A7563;margin-left:4px;font-weight:500;}
+  .ear{margin-top:12px;background:#EDE9DC;border-radius:10px;padding:12px 14px;}
+  .ear .ear-h{font-size:12px;font-weight:700;color:#6B5D4A;margin-bottom:6px;letter-spacing:1px;}
+  .ear p{font-size:13.5px;color:#4A443B;line-height:1.7;}
+  .ear .ear-m{margin-top:8px;font-size:11px;color:#9A9184;}
 
   /* 走过的路 */
   .timeline{background:var(--card);border-radius:14px;padding:14px 16px;
@@ -126,8 +131,9 @@
   <div class="scene">
     __SCENES__
     <div class="radio">
-      <div><div class="rname">__RADIO__</div><div class="rgen">__RGEN__</div></div>
+      <div><div class="rname">__RADIO__ <span class="rfreq">__RFREQ__</span></div><div class="rgen">__RGEN__</div></div>
       <a href="__RHOME__" target="_blank">打开电台</a>
+    __EAR__
     </div>
   </div>
   <div class="sky">__SKY__</div>
