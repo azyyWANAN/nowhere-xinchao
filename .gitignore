@@ -1,0 +1,11 @@
+# 真实配置与运行产物，不进 git
+config.py
+.env
+token.txt
+key.txt
+*.log
+archive/
+archive/**
+__pycache__/
+*.pyc
+.DS_Store

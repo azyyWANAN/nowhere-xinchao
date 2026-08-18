@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旅程档案 · 乌有乡</title>
+<style>
+  :root{
+    --bg:#99B6B2; --card:#FBFAF6; --dark:#2F3E3B;
+    --gold:#C9B08A; --gold-dim:#DCC9A8; --brown:#8A7563;
+    --text:#3A403D; --sub:#7C8582; --wine:#9E3B3B; --ink:#4E5E5A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,"PingFang SC","HarmonyOS Sans","Noto Sans CJK SC",sans-serif;
+    max-width:520px;margin:0 auto;padding:18px 16px 48px;
+    line-height:1.65;}
+  .topbar{display:flex;justify-content:space-between;align-items:baseline;
+    font-size:13px;color:#E7F0EE;margin-bottom:12px;}
+  .topbar .t{color:#F4FAF8;font-weight:600;letter-spacing:1px;}
+  .upd{font-size:11px;}
+
+  /* 坐标卡 */
+  .coords{background:var(--dark);border-radius:16px;padding:22px 20px;color:#fff;
+    box-shadow:0 4px 18px rgba(38,56,52,.28);}
+  .coords .lbl{font-size:10px;letter-spacing:2.5px;color:var(--gold-dim);
+    text-transform:uppercase;}
+  .coords .place{font-size:30px;font-weight:700;margin:4px 0 2px;letter-spacing:2px;}
+  .coords .ll{font-size:13px;color:#AFC0BC;}
+  .coords .osm{margin-top:8px;font-size:12px;}
+  .coords .osm a{color:var(--gold);text-decoration:none;border-bottom:1px dotted var(--gold);}
+
+  /* 四宫格 */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 20px;}
+  .cell{background:var(--card);border-radius:12px;padding:12px 6px;text-align:center;
+    box-shadow:0 2px 8px rgba(70,95,90,.14);}
+  .cell .k{font-size:11px;color:var(--sub);margin-bottom:4px;}
+  .cell .v{font-size:15px;font-weight:700;}
+
+  /* 章节标题 */
+  .sec{display:flex;justify-content:space-between;align-items:baseline;
+    margin:26px 0 10px;}
+  .sec .name{font-size:16px;font-weight:700;letter-spacing:1px;color:#F4FAF8;}
+  .sec .tag{font-size:12px;color:#E0EBE8;}
+
+  /* 此刻看到的 */
+  .scene{background:var(--card);border-radius:14px;padding:16px 16px 16px 20px;
+    box-shadow:0 2px 8px rgba(70,95,90,.14);position:relative;}
+  .scene::before{content:"";position:absolute;left:10px;top:18px;bottom:18px;
+    width:3px;border-radius:2px;background:linear-gradient(var(--gold),var(--gold-dim));}
+  .scene p{margin-bottom:10px;font-size:14px;color:#4A443B;}
+  .scene p:last-child{margin-bottom:0;}
+  .radio{margin-top:12px;background:#F1EEE4;border-radius:10px;padding:10px 12px;
+    display:flex;justify-content:space-between;align-items:center;}
+  .radio .rname{font-weight:600;font-size:13px;}
+  .radio .rgen{font-size:11px;color:var(--sub);}
+  .radio a{color:var(--wine);text-decoration:none;font-size:12px;font-weight:600;
+    border:1px solid var(--wine);border-radius:20px;padding:3px 12px;}
+
+  /* 头顶的天空 */
+  .sky{font-size:12.5px;color:#EAF2F0;margin-top:10px;padding:0 4px;}
+
+  /* 走过的路 */
+  .timeline{background:var(--card);border-radius:14px;padding:14px 16px;
+    box-shadow:0 2px 8px rgba(70,95,90,.14);}
+  .titem{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed #DCD5C4;}
+  .titem:last-child{border-bottom:none;}
+  .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--brown);margin-top:7px;}
+  .titem .tinfo{flex:1;}
+  .titem .trow{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);}
+  .titem .tbody{font-size:13.5px;margin-top:2px;color:#4A443B;}
+
+  /* 明信片 */
+  .postcard{background:var(--card);border-radius:14px;padding:18px;
+    box-shadow:0 3px 14px rgba(70,95,90,.18);margin-bottom:14px;position:relative;}
+  .postcard .mail{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+  .pc-body{flex:1;font-size:13.5px;color:#4A443B;white-space:pre-line;}
+  .pc-side{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+  .stamp{width:76px;height:56px;border:2px solid var(--gold-dim);border-radius:6px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:#FDFBF5;color:var(--gold);position:relative;}
+  .stamp::after{content:"";position:absolute;inset:2px;border:1px dashed rgba(200,176,138,.55);border-radius:4px;}
+  .stamp .air{font-size:9.5px;letter-spacing:2px;font-weight:700;}
+  .stamp .dest{font-size:12px;font-weight:700;color:#7A6A55;margin-top:2px;}
+  .postmark{width:96px;height:96px;transform:rotate(-9deg);opacity:.88;}
+  .postmark svg{width:100%;height:100%;display:block;}
+  .pc-img{width:100%;border-radius:10px;margin-top:12px;box-shadow:0 2px 8px rgba(70,95,90,.18);display:block;}
+  .pc-meta{margin-top:12px;padding-top:10px;border-top:1px solid #E8E2D2;
+    font-size:11px;color:var(--sub);display:flex;justify-content:space-between;}
+  /* 地图视角 */
+  .mapcard{background:var(--card);border-radius:14px;padding:8px;
+    box-shadow:0 2px 8px rgba(70,95,90,.14);}
+  .map-img{width:100%;border-radius:10px;display:block;}
+  .mapnote{font-size:11px;color:var(--sub);text-align:right;margin-top:6px;}
+  .footer{margin-top:34px;text-align:center;font-size:11px;color:#E0EBE8;
+    letter-spacing:2px;}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="t">旅程档案已连接</span>
+    <span class="upd">更新 __UPD__</span>
+  </div>
+
+  <div class="coords">
+    <div class="lbl">Current Coordinates</div>
+    <div class="place">__PLACE__</div>
+    <div class="ll">__LAT__°, __LON__°</div>
+    <div class="osm"><a href="__OSM__" target="_blank">在 OpenStreetMap 查看 ↗</a></div>
+  </div>
+
+  <div class="grid">
+    <div class="cell"><div class="k">天气</div><div class="v">__WEATHER__</div></div>
+    <div class="cell"><div class="k">体感</div><div class="v">__FEELS__°C</div></div>
+    <div class="cell"><div class="k">风速</div><div class="v">__WIND__ m/s</div></div>
+    <div class="cell"><div class="k">脚下</div><div class="v">__SURFACE__</div></div>
+  </div>
+
+  <div class="sec"><span class="name">地图视角</span><span class="tag">高德 · 中文路网</span></div>
+  <div class="mapcard">
+    <img class="map-img" src="/nwmap/?lat=__LAT__&lon=__LON__&src=amap&k=__KEY__" alt="__PLACE__地图" loading="lazy"/>
+    <div class="mapnote">__PLACE__ · 真实坐标</div>
+  </div>
+
+  <div class="sec"><span class="name">此刻看到的</span><span class="tag">__BIOME__</span></div>
+  <div class="scene">
+    __SCENES__
+    <div class="radio">
+      <div><div class="rname">__RADIO__</div><div class="rgen">__RGEN__</div></div>
+      <a href="__RHOME__" target="_blank">打开电台</a>
+    </div>
+  </div>
+  <div class="sky">__SKY__</div>
+
+  <div class="sec"><span class="name">走过的路</span><span class="tag">__STEPS__ 个动作</span></div>
+  <div class="timeline">
+    __TIMELINE__
+  </div>
+
+  <div class="sec"><span class="name">寄回来的明信片</span><span class="tag">__NPC__ 张</span></div>
+  __POSTCARDS__
+
+  <div class="footer">乌有乡 · 一个身体，在一颗星球上</div>
+</body>
+</html>
