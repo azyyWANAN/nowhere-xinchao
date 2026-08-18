@@ -11,6 +11,7 @@
   NOWHERE_VIEW_PORT 监听端口，默认 18082
 """
 import json, html, os, pathlib, secrets
+from urllib.request import urlopen, Request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
 import datetime
@@ -20,6 +21,8 @@ TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
 KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
+
+AMAP_KEY = os.environ.get("AMAP_KEY", "")
 
 SURFACE_CN = {"sand": "沙", "snow": "积雪", "grass": "草地", "rock": "岩石",
               "forest": "林地", "water": "水面", "soil": "泥土", "ice": "冰面",
@@ -58,6 +61,11 @@ def render():
     ear_radio = ear_st.get("station") or {}
     if ear_radio.get("name"):
         radio = {**radio, **{k: v for k, v in ear_radio.items() if v}}
+    radio_btn = ""
+    if radio.get("name") and radio.get("homepage"):
+        radio_btn = ('<div class="radio-btn-row"><a class="radio-btn" href="' + esc(radio["homepage"]) + '" target="_blank">'
+                     '<svg class="radio-ico" viewBox="0 0 24 24" width="14" height="14"><rect x="2.5" y="7" width="19" height="12" rx="3.5" fill="none" stroke="#9E3B3B" stroke-width="1.6"/><circle cx="8" cy="13" r="2.6" fill="none" stroke="#9E3B3B" stroke-width="1.3"/><path d="M14.5 13h4" stroke="#9E3B3B" stroke-width="1.4" stroke-linecap="round"/><path d="M14.5 10.6h2" stroke="#9E3B3B" stroke-width="1.2" stroke-linecap="round"/><line x1="6.5" y1="7" x2="8.6" y2="4.2" stroke="#9E3B3B" stroke-width="1.4" stroke-linecap="round"/><line x1="10.2" y1="7" x2="12.3" y2="4.2" stroke="#9E3B3B" stroke-width="1.4" stroke-linecap="round"/></svg>'
+                     '<span>打开电台</span></a></div><div class="radio-hint">他在这座城，拧开了本地的台</div>')
     heard = ear.get("heard") or {}
     hear_html = ""
     if heard.get("text"):
@@ -136,7 +144,7 @@ def render():
         noise_id = "pmn%d" % i
         dstr = lt[:10].replace("-", ".") if lt else ""
         tstr = lt[11:16] if len(lt or "") >= 16 else ""
-        ring = "%s · %.2fN %.2fE" % (place, lat, lon)
+        ring = "%s · %.2fN %.2fE" % (place[:9], lat, lon)
         return f'''<div class="postmark"><svg viewBox="0 0 100 100">
 <defs>
 <path id="{arc_id}" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0"/>
@@ -198,8 +206,7 @@ def render():
             .replace("__SURFACE__", esc(surface_cn))
             .replace("__BIOME__", esc(biome_cn))
             .replace("__SCENES__", scenes_html)
-            .replace("__RADIO__", esc(radio.get("name", "—")))
-            .replace("__RFREQ__", esc(radio.get("freq", "")))
+            .replace("__RADIOBTN__", radio_btn)
             .replace("__EAR__", hear_html)
             .replace("__RGEN__", esc(radio.get("genre", "")))
             .replace("__RHOME__", esc(radio.get("homepage", "#")))
@@ -213,10 +220,42 @@ def render():
 
 class H(BaseHTTPRequestHandler):
     def do_GET(self):
+        path = urlparse(self.path).path
         q = parse_qs(urlparse(self.path).query)
         if q.get("k", [""])[0] != KEY:
             body = b"forbidden"
             self.send_response(403)
+            self.send_header("Content-Type", "text/plain; charset=utf-8")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if path.startswith("/nwmap") and AMAP_KEY:
+            try:
+                lat = float(q.get("lat", ["0"])[0])
+                lon = float(q.get("lon", ["0"])[0])
+                z = q.get("zoom", ["12"])[0]
+                mu = ("https://restapi.amap.com/v3/staticmap"
+                      "?location=" + str(lon) + "," + str(lat) + "&zoom=" + z +
+                      "&size=750*420&markers=mid,0x9E3B3B,A:" + str(lon) + "," + str(lat) +
+                      "&key=" + AMAP_KEY)
+                req = Request(mu, headers={"User-Agent": "Mozilla/5.0"})
+                data = urlopen(req, timeout=15).read()
+                self.send_response(200)
+                self.send_header("Content-Type", "image/png")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_header("Content-Length", str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+            except Exception:
+                body = b"map unavailable"
+                self.send_response(502)
+                self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+            return
         else:
             body = render().encode("utf-8")
             self.send_response(200)
