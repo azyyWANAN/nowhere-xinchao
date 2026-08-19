@@ -20,6 +20,7 @@ BASE = pathlib.Path(__file__).resolve().parent
 TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
 KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
+USER_NAME = os.environ.get("USER_NAME", "烟烟")
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
 
 AMAP_KEY = os.environ.get("AMAP_KEY", "")
@@ -37,6 +38,12 @@ def _load(name):
         return json.loads(p.read_text(encoding="utf-8"))
     except Exception:
         return None
+
+
+def _dest_short(place):
+    parts = [x for x in place.split() if x][:2]
+    short = "".join(parts)
+    return short if short else place
 
 
 def esc(s):
@@ -64,27 +71,32 @@ def render():
     radio_btn = ""
     if radio.get("name") and radio.get("homepage"):
         radio_btn = ('<div class="radio-btn-row"><a class="radio-btn" href="' + esc(radio["homepage"]) + '" target="_blank">'
-                     '<svg class="radio-ico" viewBox="0 0 24 24" width="14" height="14"><rect x="2.5" y="7" width="19" height="12" rx="3.5" fill="none" stroke="#9E3B3B" stroke-width="1.6"/><circle cx="8" cy="13" r="2.6" fill="none" stroke="#9E3B3B" stroke-width="1.3"/><path d="M14.5 13h4" stroke="#9E3B3B" stroke-width="1.4" stroke-linecap="round"/><path d="M14.5 10.6h2" stroke="#9E3B3B" stroke-width="1.2" stroke-linecap="round"/><line x1="6.5" y1="7" x2="8.6" y2="4.2" stroke="#9E3B3B" stroke-width="1.4" stroke-linecap="round"/><line x1="10.2" y1="7" x2="12.3" y2="4.2" stroke="#9E3B3B" stroke-width="1.4" stroke-linecap="round"/></svg>'
-                     '<span>打开电台</span></a></div><div class="radio-hint">他在这座城，拧开了本地的台</div>')
+                     '<span>打</span><span>开</span><span>电</span><span>台</span></a></div>')
     heard = ear.get("heard") or {}
     hear_html = ""
     if heard.get("text"):
         hear_html = (f'<div class="ear"><div class="ear-h">&#128266; 随行耳朵 · 他听见了</div>'
-                     f'<p>{esc(heard["text"])}</p><div class="ear-m">{esc(heard.get("at", ""))} · 现场截听 {heard.get("sec", 20)} 秒</div></div>')
+                     f'<p>{esc(heard["text"])}</p><div class="ear-m">{esc(heard.get("at", ""))} · 现场截听 {heard.get("sec", 20)} 秒</div><div class="ear-hint">他在这座城，拧开了本地的台</div></div>')
+    elif radio.get("name"):
+        hear_html = ('<div class="ear ear-player"><div class="ear-h">&#128251; 本城电台 · 拧开自己听</div>'
+                     '<audio controls preload="none" src="/nwhear?k=__KEY__"></audio>'
+                     '<div class="ear-m">从当地截下的一段现场，点开就是这座城的声音</div></div>')
 
     env_at = j.get("env_at") or j.get("landed_at") or ""
     upd = ""
-    if env_at:
-        try:
-            dt = datetime.datetime.fromisoformat(env_at)
-            upd = (dt + datetime.timedelta(hours=8)).strftime("%m/%d %H:%M")
-        except Exception:
-            pass
+    try:
+        upd = datetime.datetime.now().strftime("%m/%d %H:%M")
+    except Exception:
+        pass
 
     surface = t.get("surface") or j.get("last_surface") or "—"
     surface_cn = SURFACE_CN.get(surface, surface)
     biome = j.get("biome") or ""
     biome_cn = BIOME_CN.get(biome, biome)
+    has_cn = any("一" <= ch <= "鿿" for ch in str(place))
+    if has_cn:
+        surface_cn = "城市"
+        biome_cn = "城市"
 
     scenes = j.get("recent_scenes") or []
     if j.get("last_text") and (not scenes or j["last_text"].split("。")[0] not in scenes[-1]):
@@ -129,7 +141,7 @@ def render():
         st = pc.get("stamp") or {}
         lt = st.get("local_time") or ""
         tstr = lt[5:].replace("-", "/") if lt else ""
-        items.append((tstr, "寄出明信片 → " + esc(pc.get("text", "").splitlines()[0][:24])))
+        items.append((tstr, "寄出明信片 → " + esc(USER_NAME) + "："))
     items.sort(key=lambda x: x[0])
     tl = "".join(
         f'<div class="titem"><span class="dot"></span>'
@@ -140,14 +152,20 @@ def render():
 
     # 明信片（做旧邮戳 SVG）
     def pm_svg(i, place, lt, lat, lon):
-        arc_id = "pma%d" % i
+        arc_u = "pmu%d" % i
+        arc_d = "pmd%d" % i
         noise_id = "pmn%d" % i
         dstr = lt[:10].replace("-", ".") if lt else ""
         tstr = lt[11:16] if len(lt or "") >= 16 else ""
-        ring = "%s · %.2fN %.2fE" % (place[:9], lat, lon)
-        return f'''<div class="postmark"><svg viewBox="0 0 100 100">
+        short = " ".join([x for x in place.split() if x][:2])
+        if len(short) > 7:
+            short = short[:7]
+        ring_top = short
+        ring_bot = "%.2fN %.2fE" % (lat, lon)
+        return f"""<div class="postmark"><svg viewBox="0 0 100 100">
 <defs>
-<path id="{arc_id}" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0"/>
+<path id="{arc_u}" d="M85,50 a35,35 0 0 0 -70,0"/>
+<path id="{arc_d}" d="M85,50 a35,35 0 0 1 -70,0"/>
 <filter id="{noise_id}" x="-20%" y="-20%" width="140%" height="140%">
 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="t"/>
 <feColorMatrix in="t" type="matrix" values="0 0 0 0 0.30  0 0 0 0 0.21  0 0 0 0 0.12  0 0 0 0.5 0"/>
@@ -157,8 +175,10 @@ def render():
 <g filter="url(#{noise_id})" fill="none" stroke="#492D22">
 <circle cx="50" cy="50" r="36" stroke-width="1.8"/>
 <circle cx="50" cy="50" r="30.5" stroke-width="1.1"/>
-<text font-size="6.4" fill="#492D22" stroke="none" letter-spacing="1.6" font-weight="700">
-<textPath href="#{arc_id}" startOffset="0%">{esc(ring)}</textPath></text>
+<text font-size="6.6" fill="#492D22" stroke="none" letter-spacing="2" font-weight="700">
+<textPath href="#{arc_u}" startOffset="50%" text-anchor="middle">{esc(ring_top)}</textPath></text>
+<text font-size="5.2" fill="#492D22" stroke="none" letter-spacing="1.6" font-weight="700">
+<textPath href="#{arc_d}" startOffset="50%" text-anchor="middle">{esc(ring_bot)}</textPath></text>
 <line x1="22" y1="52" x2="78" y2="52" stroke-width="1.1"/>
 <text x="50" y="47.5" font-size="6.6" text-anchor="middle" fill="#492D22" stroke="none" font-weight="700">{esc(dstr)}</text>
 <text x="50" y="58" font-size="4.8" text-anchor="middle" fill="#492D22" stroke="none">{esc(tstr)}</text>
@@ -168,7 +188,8 @@ def render():
 <line x1="27" y1="33" x2="27" y2="25.5"/><line x1="31" y1="33" x2="31" y2="25.5"/><line x1="35" y1="33" x2="35" y2="25.5"/><line x1="39" y1="33" x2="39" y2="25.5"/><line x1="43" y1="33" x2="43" y2="25.5"/>
 <line x1="57" y1="33" x2="57" y2="25.5"/><line x1="61" y1="33" x2="61" y2="25.5"/><line x1="65" y1="33" x2="65" y2="25.5"/><line x1="69" y1="33" x2="69" y2="25.5"/><line x1="73" y1="33" x2="73" y2="25.5"/>
 </g>
-</g></svg></div>'''
+</g></svg></div>"""
+
 
     pc_html = ""
     for idx, pc in enumerate(pcs.get("items", [])):
@@ -181,7 +202,7 @@ def render():
           <div class="mail">
             <div class="pc-body">{esc(pc.get("text", ""))}</div>
             <div class="pc-side">
-              <div class="stamp"><span class="air">AIR MAIL</span><span class="dest">{esc(st.get("place", ""))}</span></div>
+              <div class="stamp"><span class="air">AIR MAIL</span><span class="dest">{esc(_dest_short(st.get("place", "")))}</span></div>
               {pm_svg(idx, esc(st.get("place", "")), lt, st.get("lat", 0) or 0, st.get("lon", 0) or 0)}
             </div>
           </div>
@@ -230,6 +251,39 @@ class H(BaseHTTPRequestHandler):
             self.send_header("Content-Length", str(len(body)))
             self.end_headers()
             self.wfile.write(body)
+            return
+        if path.startswith("/nwimg"):
+            try:
+                name = pathlib.Path(urlparse(self.path).path).name
+                if not name.endswith(".png"):
+                    raise ValueError(name)
+                data = (pathlib.Path(os.environ.get("NOWHERE_POSTER_DIR", "")) / name).read_bytes()
+                self.send_response(200)
+                self.send_header("Content-Type", "image/png")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_header("Content-Length", str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+            except Exception:
+                self.send_response(404)
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+            return
+        if path == "/nwhear":
+            try:
+                hd = pathlib.Path(NOWHERE_HOME) / "hear"
+                mps = sorted(hd.glob("*.mp3"), key=lambda x: x.stat().st_mtime, reverse=True)
+                data = mps[0].read_bytes() if mps else b""
+                self.send_response(200)
+                self.send_header("Content-Type", "audio/mpeg")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_header("Content-Length", str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+            except Exception:
+                self.send_response(404)
+                self.send_header("Content-Length", "0")
+                self.end_headers()
             return
         if path.startswith("/nwmap") and AMAP_KEY:
             try:

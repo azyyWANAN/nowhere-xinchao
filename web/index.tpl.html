@@ -53,13 +53,15 @@
   .radio{margin-top:12px;background:#F1EEE4;border-radius:10px;padding:10px 12px;
     display:flex;justify-content:space-between;align-items:center;}
   .radio .rname{font-weight:600;font-size:13px;}
-  .radio-btn-row{display:flex;justify-content:center;margin:2px 0 4px;}
-  .radio-btn{display:inline-flex;align-items:center;gap:7px;background:transparent;
-    border:1px solid #CBBFA4;border-radius:24px;padding:6px 16px;text-decoration:none;
-    color:#7A6A55;font-size:12.5px;font-weight:600;letter-spacing:2px;transition:all .2s;}
-  .radio-btn:active{border-color:#9E3B3B;color:#9E3B3B;background:#F7F3E8;}
-  .radio-ico{flex:none;}
-  .radio-hint{text-align:center;font-size:10.5px;color:#B3AA99;letter-spacing:1.5px;margin:2px 0 6px;}
+  .radio-btn-row{display:flex;justify-content:flex-start;margin:6px 0 12px;padding-left:6px;}
+  .radio-btn{display:inline-flex;flex-direction:column;align-items:center;
+    border:1.2px solid #3D5F36;border-radius:999px;padding:9px 6px;
+    text-decoration:none;color:#3D5F36;font-size:11px;font-weight:600;
+    letter-spacing:2px;line-height:1.35;transition:all .2s;}
+  .radio-btn:active{background:#3D5F36;color:#F1EEE4;}
+  .radio-btn:active span{color:#F1EEE4;}
+  .ear-hint{text-align:center;font-size:10.5px;color:#3D5F36;letter-spacing:1.5px;margin-top:7px;}
+  .ear .ear-m{text-align:center;}
   .radio .rgen{font-size:11px;color:var(--sub);}
   .radio a{color:var(--wine);text-decoration:none;font-size:12px;font-weight:600;
     border:1px solid var(--wine);border-radius:20px;padding:3px 12px;}
@@ -105,6 +107,10 @@
     box-shadow:0 2px 8px rgba(70,95,90,.14);}
   .map-img{width:100%;border-radius:10px;display:block;}
   .mapnote{font-size:11px;color:var(--sub);text-align:right;margin-top:6px;}
+  .ear-player audio{width:100%;height:34px;margin-top:6px;}
+  @media (min-width:768px){
+    body{background:linear-gradient(180deg,#58706A 0%,#2F3E3B 100%);}
+  }
   .footer{margin-top:34px;text-align:center;font-size:11px;color:#E0EBE8;
     letter-spacing:2px;}
 </style>
@@ -153,6 +159,6 @@
   <div class="sec"><span class="name">寄回来的明信片</span><span class="tag">__NPC__ 张</span></div>
   __POSTCARDS__
 
-  <div class="footer">乌有乡 · 一个身体，在一颗星球上</div>
+  <div class="footer">乌有乡 · 一个身体，在一颗星球上 · v3.9</div>
 </body>
 </html>
