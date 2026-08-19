@@ -27,6 +27,10 @@ CN_BOOK = [
      "lat": 31.30, "lon": 120.62,
      "stream": "http://lhttp.qingting.fm/live/2806/64k.mp3",
      "genre": "traffic · 交通", "homepage": "https://www.qtfm.cn/radios/2806"},
+    {"name": "洛阳音乐广播", "city": "洛阳", "freq": "FM96.5",
+     "lat": 34.68, "lon": 112.45,
+     "stream": "http://lhttp.qingting.fm/live/1226/64k.mp3",
+     "genre": "music · 音乐", "homepage": "https://www.qtfm.cn/radios/1226"},
     {"name": "西湖之声", "city": "杭州", "freq": "FM105.4",
      "lat": 30.25, "lon": 120.15,
      "stream": "http://lhttp.qingting.fm/live/1163/64k.mp3",
@@ -84,6 +88,20 @@ def locate(lat, lon):
         if not stations:
             return {"source": "none", "station": None, "lat": lat, "lon": lon, "at": _now()}
         s = stations[0]
+        # 兜底链再加一环：黄页给的台离得太远（或没坐标），只要人在中国境内，
+        # 就按国家码搜中国台顶上，至少拧开是中文。
+        try:
+            _gla, _glo = s.get("geo_lat"), s.get("geo_lon")
+            if (_gla is None or _glo is None) or                (hav(lat, lon, float(_gla), float(_glo)) > 400):
+                if 73.0 <= lon <= 135.0 and 18.0 <= lat <= 54.0:
+                    _u2 = ("https://de1.api.radio-browser.info/json/stations/search"
+                           "?countrycode=CN&hidebroken=true&limit=10&order=votes")
+                    with urllib.request.urlopen(_u2, timeout=20) as _r2:
+                        _cn = json.loads(_r2.read().decode("utf-8"))
+                    if _cn:
+                        s = _cn[0]
+        except Exception:
+            pass
         st = {"name": (s.get("name") or "未知电台").strip(),
               "city": s.get("countrycode", "?"),
               "freq": "", "stream": s.get("url_resolved") or s.get("url") or "",
