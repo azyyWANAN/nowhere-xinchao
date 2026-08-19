@@ -140,6 +140,9 @@
     box-shadow:0 8px 40px rgba(0,0,0,.5);}
   .footer{margin-top:34px;text-align:center;font-size:11px;color:#E0EBE8;
     letter-spacing:2px;}
+  .drawing-inner{display:flex;align-items:center;gap:10px;color:#9aa5b1;font-size:14px;padding:18px;justify-content:center;}
+  .drawing-dot{width:12px;height:12px;border-radius:50%;border:2px solid #c9b7a5;border-top-color:transparent;animation:nwspin 1s linear infinite;}
+  @keyframes nwspin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -164,7 +167,7 @@
 
   <div class="sec"><span class="name">地图视角</span><span class="tag">__MAPSRC__</span></div>
   <div class="mapcard">
-    <img class="map-img" src="/nwmap/?lat=__LAT__&lon=__LON__&k=__KEY__&v=43" alt="__PLACE__地图" loading="lazy"/>
+    <img class="map-img" src="/nwmap/?lat=__LAT__&lon=__LON__&k=__KEY__&v=__V__" alt="__PLACE__地图" />
     <div class="mapnote">__PLACE__ · 真实坐标</div>
   </div>
 

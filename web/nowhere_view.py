@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """乌有乡旅程档案 · 手机网页版"""
-import json, html, os, pathlib, secrets, re
+import json, html, os, pathlib, secrets, re, time
+import threading
 from urllib.request import urlopen, Request
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 import datetime
 
@@ -163,6 +164,37 @@ def _find_roadnet(lat, lon):
     if best is not None and bestd <= 0.15:
         return best
     return None
+
+
+def _kick_roadnet(lat, lon):
+    """当前城市没有路网图：后台开画，画好刷新页面就能看见。防重复用标记文件。"""
+    _d = pathlib.Path(NOWHERE_HOME) / "roadnet"
+    try:
+        _d.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        return
+    _png = _d / ("%.2f_%.2f.png" % (lat, lon))
+    _mark = _d / ("%.2f_%.2f.drawing" % (lat, lon))
+    if _png.exists() or _mark.exists():
+        return
+
+    def _job():
+        try:
+            _mark.write_text("drawing", encoding="utf-8")
+            import subprocess
+            import sys
+            _script = pathlib.Path(__file__).resolve().parent.parent / "roadnet.py"
+            subprocess.run([sys.executable, str(_script), str(lat), str(lon),
+                            "auto", "8000", str(_png)], timeout=240, check=False)
+        except Exception:
+            pass
+        finally:
+            try:
+                _mark.unlink()
+            except Exception:
+                pass
+
+    threading.Thread(target=_job, daemon=True).start()
 
 
 def esc(s):
@@ -426,7 +458,10 @@ def render():
                         '<div class="rn-caption">' + esc(_pick_city_letter(place)) + '</div>'
                         '<div class="mapnote">' + esc(place) + '</div></div>')
     else:
-        roadnet_html = ""
+        _kick_roadnet(lat, lon)
+        roadnet_html = ('<div class="sec"><span class="name">城市路网</span><span class="tag">城写下的情书</span></div>'
+                        '<div class="mapcard drawing"><div class="drawing-inner">'
+                        '<span class="drawing-dot"></span>正在为你画「' + esc(place) + '」的路网，大约一两分钟，稍后刷新就能看见。</div></div>')
 
     _rn_items = []
     _rn_dir = pathlib.Path("/home/ubuntu/.nowhere/roadnet")
@@ -481,7 +516,7 @@ def render():
             .replace("__MAPSRC__", "OpenStreetMap · 全球路网" if (lon < 73 or lon > 135 or lat < 18 or lat > 54) else "高德 · 中文路网")
             .replace("__TIMELINE__", tl)
             .replace("__NPC__", str(len(pcs.get("items", []))))
-            .replace("__POSTCARDS__", pc_html).replace("__KEY__", KEY))
+            .replace("__POSTCARDS__", pc_html).replace("__KEY__", KEY).replace("__V__", str(int(time.time()))))
     return html
 
 
@@ -518,9 +553,16 @@ class H(BaseHTTPRequestHandler):
                 name = pathlib.Path(urlparse(self.path).path).name
                 if not name.endswith(".png"):
                     raise ValueError(name)
-                data = (pathlib.Path("/home/ubuntu/apps/nowhere/nowhere/static/postcards") / name).read_bytes()
+                _pcdir = pathlib.Path("/home/ubuntu/apps/nowhere/nowhere/static/postcards")
+                _jf = _pcdir / "jpg" / (name[:-4] + ".jpg")
+                if _jf.exists():
+                    data = _jf.read_bytes()
+                    _ct = "image/jpeg"
+                else:
+                    data = (_pcdir / name).read_bytes()
+                    _ct = "image/png"
                 self.send_response(200)
-                self.send_header("Content-Type", "image/png")
+                self.send_header("Content-Type", _ct)
                 self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
@@ -543,6 +585,10 @@ class H(BaseHTTPRequestHandler):
                     _tf = _rf.parent / "thumb" / (_rf.stem + ".jpg")
                     if _tf.exists():
                         _rf, _ct = _tf, "image/jpeg"
+                else:
+                    _jf = _rf.parent / "jpg" / (_rf.stem + ".jpg")
+                    if _jf.exists():
+                        _rf, _ct = _jf, "image/jpeg"
                 data = _rf.read_bytes()
                 self.send_response(200)
                 self.send_header("Content-Type", _ct)
@@ -584,7 +630,10 @@ class H(BaseHTTPRequestHandler):
                 if _path:
                     mu += "&path=" + _path
                 req = Request(mu, headers={"User-Agent": "Mozilla/5.0"})
-                data = urlopen(req, timeout=15).read()
+                try:
+                    data = urlopen(req, timeout=15).read()
+                except Exception:
+                    data = b""
                 if len(data) < 5000:
                     _osm = _osm_tile_map(lat, lon)
                     if _osm:
@@ -592,6 +641,7 @@ class H(BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.send_header("Content-Type", "image/png")
                 self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_header("Cache-Control", "no-store")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
                 self.wfile.write(data)
@@ -617,4 +667,4 @@ class H(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     print(f"nowhere-view on :{PORT}", flush=True)
-    HTTPServer(("0.0.0.0", PORT), H).serve_forever()
+    ThreadingHTTPServer(("0.0.0.0", PORT), H).serve_forever()
