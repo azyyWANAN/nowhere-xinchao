@@ -201,6 +201,7 @@
       box.className = 'zoom-box';
       var im = t.cloneNode();
       im.className = 'zoom-img';
+      im.src = t.src.replace('&t=1', '').replace('?t=1', '');
       box.appendChild(im);
       box.onclick = function(){ box.remove(); };
       document.body.appendChild(box);
