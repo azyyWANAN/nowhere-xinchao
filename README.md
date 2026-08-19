@@ -109,6 +109,13 @@ python3 travel_archiver.py        # 每 5 分钟扫一遍，增量归档
 - [city-roads](https://github.com/anvaka/city-roads) — @anvaka，"只画路，别的什么都不留"的城市路网美学，路网图灵感的来源。
 - 数据源：OpenStreetMap / Overpass（路网）、radio-browser.info（全球电台黄页）、高德地图（国内地图与路网瓦片）、蜻蜓FM（国内电台流）。
 
+## 已知问题与路线图
+
+- 电台自动截流小工偶发不跑（明信片寄出后的后台线程），暂靠手动 `radio_ear.py catch` 补；根因待排查。
+- radio-browser 黄页在国内边远地区（新疆、洛阳等）收录少，兜底到远方电台；靠 `CN_BOOK` 通讯录逐步补。
+- 路网绘制（Overpass）需 60~90 秒，偶尔慢半拍；可加"绘制中"占位。
+- 轨迹图模块（路网指纹相册）方向已定，尚未单独实现。
+
 ## 许可
 
 本仓库代码：MIT（见 [LICENSE](LICENSE)）。
