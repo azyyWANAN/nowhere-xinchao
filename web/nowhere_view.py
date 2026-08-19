@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """乌有乡旅程档案 · 手机网页版"""
-import json, html, os, pathlib, secrets
+import json, html, os, pathlib, secrets, re
 from urllib.request import urlopen, Request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
@@ -11,7 +11,7 @@ BASE = pathlib.Path(__file__).resolve().parent
 TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
 KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
-USER_NAME = os.environ.get("USER_NAME", "烟烟")
+USER_NAME = os.environ.get("USER_NAME", "你")
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
 
 AMAP_KEY = ""
@@ -226,8 +226,18 @@ def render():
             surface_cn, biome_cn = _cs, _cb
 
     scenes = j.get("recent_scenes") or []
-    if j.get("last_text") and (not scenes or j["last_text"].split("。")[0] not in scenes[-1]):
-        scenes = scenes + [j["last_text"]]
+    if j.get("last_text"):
+        # 判重按句子粒度：last_text 里凡是已存在于 scenes 的句子都滤掉，只追新句。
+        # 修复：探索类动作会把已存 scene 整段再带进 last_text，导致“此刻看到的”重复渲染。
+        _pool = "".join(scenes)
+        _new_parts = []
+        for _part in re.split(r"[。\n]+", j["last_text"]):
+            _part = _part.strip()
+            if not _part or _part in _pool:
+                continue
+            _new_parts.append(_part)
+        if _new_parts:
+            scenes = scenes + ["。".join(_new_parts) + "。"]
     scenes_html = "".join(f"<p>{esc(s)}</p>" for s in scenes[-4:])
 
     # 天空
@@ -265,7 +275,8 @@ def render():
     narr = j.get("narrative") or {}
     if narr.get("distance_walked"):
         d = narr.get("direction") or ""
-        items.append(("", f"朝{d}走了 {narr['distance_walked'] / 1000:.1f} km"))
+        verb = f"朝{d}走了" if d else "向前走了"
+        items.append(("", f"{verb} {narr['distance_walked'] / 1000:.1f} km"))
     for pc in pcs.get("items", []):
         st = pc.get("stamp") or {}
         lt = st.get("local_time") or ""
