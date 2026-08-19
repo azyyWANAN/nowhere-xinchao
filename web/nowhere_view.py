@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """乌有乡旅程档案 · 手机网页版"""
-import json, html, os, pathlib, secrets
+import json, html, os, pathlib
 from urllib.request import urlopen, Request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
@@ -10,7 +10,7 @@ import datetime
 BASE = pathlib.Path(__file__).resolve().parent
 TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
-KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
+KEY = os.environ.get("NOWHERE_VIEW_KEY", "0e327405b636c97deebc5ae1")
 USER_NAME = os.environ.get("USER_NAME", "烟烟")
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
 
@@ -68,6 +68,8 @@ def _classify(place):
     for c in KNOWN_CITIES:
         if c in place:
             return "城市", "城市"
+    if place and place.strip():
+        return "小镇", "小镇"
     return None, None
 
 
@@ -131,7 +133,7 @@ def _pick_city_letter(city):
 
 def _find_roadnet(lat, lon):
     """在路网目录里找离坐标最近的一张图，距离 < 0.15 度算命中。"""
-    _d = pathlib.Path(NOWHERE_HOME) / "roadnet"
+    _d = pathlib.Path("/home/ubuntu/.nowhere/roadnet")
     if not _d.is_dir():
         return None
     best, bestd = None, 1e9
@@ -328,7 +330,7 @@ def render():
 
     all_pcs = pcs.get("items", [])
     recent, older = all_pcs[-3:], all_pcs[:-3]
-    pc_html = "".join(pc_card(pc, i) for i, pc in enumerate(recent))
+    pc_html = "".join(pc_card(pc, i) for i, pc in reversed(list(enumerate(recent))))
     if not pc_html:
         pc_html = '<div class="postcard"><div class="pc-body" style="color:#8A8378">还没有明信片寄回来。等他走到下一个地方。</div></div>'
     if older:
