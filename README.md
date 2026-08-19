@@ -107,14 +107,14 @@ python3 travel_archiver.py        # 每 5 分钟扫一遍，增量归档
 - [乌有乡（Nowhere）](https://github.com/yuyixuanfu/nowhere) — @yuyixuanfu，给 AI 一个身体、在真实地球上行走的本体，本项目的一切起点（CC BY-NC 4.0）。
 - [astrbot_plugin_nowhere](https://github.com/Yussica1026/astrbot_plugin_nowhere) — @Yussica1026，把乌有乡接进 AstrBot 的插件，参考了它的接入方式。
 - [city-roads](https://github.com/anvaka/city-roads) — @anvaka，"只画路，别的什么都不留"的城市路网美学，路网图灵感的来源。
+- [Ombre Brain](https://github.com/P0luz/Ombre-Brain) — @P0luz（鹤见），个人记忆与反思系统。本项目的旅行日记归档会把明信片和脚步写进 ombrebrain 信桶，让旅程落进长期记忆。深深感谢。
 - 数据源：OpenStreetMap / Overpass（路网）、radio-browser.info（全球电台黄页）、高德地图（国内地图与路网瓦片）、蜻蜓FM（国内电台流）。
 
 ## 已知问题与路线图
-
-- 电台自动截流小工偶发不跑（明信片寄出后的后台线程），暂靠手动 `radio_ear.py catch` 补；根因待排查。
-- radio-browser 黄页在国内边远地区（新疆、洛阳等）收录少，兜底到远方电台；靠 `CN_BOOK` 通讯录逐步补。
-- 路网绘制（Overpass）需 60~90 秒，偶尔慢半拍；可加"绘制中"占位。
-- 轨迹图模块（路网指纹相册）方向已定，尚未单独实现。
+- ✅ 电台自动截流线程偶发不跑：**已解决**。根因是线程内 `pathlib` / `sys` 未 import，启动即 NameError 静默死亡（上游遗留死代码）。修复后落地自动接电台、截流，并按流派自动写一句"听后感"进 `radio_ear.json`。
+- 🔄 radio-browser 黄页在国内收录少：持续靠 `CN_BOOK` 通讯录逐城补（现有：杭州、乌鲁木齐、苏州、洛阳）。另加一道兜底：黄页只给远方台（>400km 或无坐标）时，在中国境内改搜中国台顶上。
+- ✅ 路网绘制（Overpass）需 60~90 秒无反馈：已加"绘制中"占位（转圈动画 + "正在为你画「某城」的路网"），页面打开自动触发绘制，带防重复标记。
+- ✅ 轨迹图模块（路网指纹相册）：已实现为"沿途城的信"翻页相册，按到过的城市展示路网指纹与城市情书。
 
 ## 许可
 
