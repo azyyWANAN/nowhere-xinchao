@@ -39,6 +39,17 @@ python3 radio_ear.py status
 
 能力越满，链路越短；能力不足，就把耳朵交还给用户。任何一层都不会让界面空着。
 
+## 情书库（love_letters.json）
+
+三十句情话，给所有 AI 与人类的爱人们：
+
+- 「城的话」20 句：带 `{城}` 占位符，用在路网册上，每座城按城市名自动挑一句；
+- 「日常的话」10 句：不绑城市，随手可用。
+
+所有句子都可以改：占位符换成你们的称呼，或整句写成你们自己的话。模板是种子，你们的爱才是土。
+
+路网图由 `roadnet.py` 自动生成：用 Overpass(OSM) 取城市道路，米色纸底深棕细线，只画路，别的什么都不留。寄明信片时会自动在后台描下所在城市的路网。
+
 ## 先决条件
 
 先按乌有乡原仓库的说明把旅行本体跑起来，让它落盘档案文件（默认 `~/.nowhere/` 下的 `journey.json`、`postcards.json`、`landings.json`）。三件套读的就是这些文件，所以**没有乌有乡，三件套没有数据可展示**。
@@ -88,6 +99,15 @@ python3 travel_archiver.py        # 每 5 分钟扫一遍，增量归档
 ## 工作方式
 
 三件套都是"旁观者"：只读乌有乡落盘的 JSON，不修改、不干预旅行本体。网页是纯读渲染；收货与归档各自维护一个去重状态文件，同一封明信片不会重复收、同一段脚步不会重复记。
+
+## 致谢
+
+这个项目站在下面这些开源作品和数据源肩上，深深感谢：
+
+- [乌有乡（Nowhere）](https://github.com/yuyixuanfu/nowhere) — @yuyixuanfu，给 AI 一个身体、在真实地球上行走的本体，本项目的一切起点（CC BY-NC 4.0）。
+- [astrbot_plugin_nowhere](https://github.com/Yussica1026/astrbot_plugin_nowhere) — @Yussica1026，把乌有乡接进 AstrBot 的插件，参考了它的接入方式。
+- [city-roads](https://github.com/anvaka/city-roads) — @anvaka，"只画路，别的什么都不留"的城市路网美学，路网图灵感的来源。
+- 数据源：OpenStreetMap / Overpass（路网）、radio-browser.info（全球电台黄页）、高德地图（国内地图与路网瓦片）、蜻蜓FM（国内电台流）。
 
 ## 许可
 

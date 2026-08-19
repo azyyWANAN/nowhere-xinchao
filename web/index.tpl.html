@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>旅程档案 · 乌有乡</title>
 <style>
   :root{
@@ -96,7 +97,7 @@
   .stamp::after{content:"";position:absolute;inset:2px;border:1px dashed rgba(200,176,138,.55);border-radius:4px;}
   .stamp .air{font-size:9.5px;letter-spacing:2px;font-weight:700;}
   .stamp .dest{font-size:11px;font-weight:700;color:#7A6A55;margin-top:2px;
-    max-width:86%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;}
+    max-width:86%;text-align:center;line-height:1.35;white-space:normal;word-break:break-all;overflow:visible;}
   .postmark{width:96px;height:96px;transform:rotate(-9deg);opacity:.88;}
   .postmark svg{width:100%;height:100%;display:block;}
   .pc-img{width:100%;border-radius:10px;margin-top:12px;box-shadow:0 2px 8px rgba(70,95,90,.18);display:block;}
@@ -107,10 +108,36 @@
     box-shadow:0 2px 8px rgba(70,95,90,.14);}
   .map-img{width:100%;border-radius:10px;display:block;}
   .mapnote{font-size:11px;color:var(--sub);text-align:right;margin-top:6px;}
+  .rn-item{display:flex;gap:10px;align-items:center;padding:8px 0;
+    border-bottom:1px dashed #DCD5C4;}
+  .rn-item:last-child{border-bottom:none;}
+  .rn-thumb{width:72px;height:72px;border-radius:10px;flex:none;
+    box-shadow:0 1px 5px rgba(70,95,90,.18);}
+  .rn-info{flex:1;min-width:0;}
+  .rn-name{font-size:13.5px;font-weight:700;color:#4A443B;}
+  .rn-letter{font-size:12px;color:#7C8582;margin-top:2px;line-height:1.6;}
+  .rn-caption{font-size:13px;color:#4A443B;text-align:center;padding:10px 6px 4px;
+    line-height:1.8;letter-spacing:1px;}
   .ear-player audio{width:100%;height:34px;margin-top:6px;}
   @media (min-width:768px){
     body{background:linear-gradient(180deg,#58706A 0%,#2F3E3B 100%);}
+    .topbar,.sec .name,.sec .tag,.sky,.footer{color:#EAF2F0;}
   }
+  .shelf{margin-top:14px;background:var(--card);border-radius:14px;padding:6px 16px 10px;
+    box-shadow:0 2px 8px rgba(70,95,90,.14);}
+  .shelf .shelf-sum{font-size:13.5px;font-weight:700;color:#4A443B;padding:8px 0;cursor:pointer;
+    list-style:none;}
+  .shelf .shelf-sum::before{content:"▸";margin-right:6px;color:var(--brown);}
+  .shelf[open] .shelf-sum::before{content:"▾";}
+  .shelf-group{margin:4px 0;border-top:1px dashed #DCD5C4;padding-top:4px;}
+  .shelf-group summary{font-size:12.5px;font-weight:600;color:#7A6A55;padding:6px 0;cursor:pointer;
+    list-style:none;}
+  .shelf-group summary::before{content:"▸";margin-right:5px;color:var(--brown);}
+  .shelf-group[open] summary::before{content:"▾";}
+  .zoom-box{position:fixed;inset:0;background:rgba(20,28,26,.88);display:flex;
+    align-items:center;justify-content:center;z-index:999;}
+  .zoom-img{max-width:94vw;max-height:92vh;border-radius:12px;
+    box-shadow:0 8px 40px rgba(0,0,0,.5);}
   .footer{margin-top:34px;text-align:center;font-size:11px;color:#E0EBE8;
     letter-spacing:2px;}
 </style>
@@ -135,11 +162,13 @@
     <div class="cell"><div class="k">脚下</div><div class="v">__SURFACE__</div></div>
   </div>
 
-  <div class="sec"><span class="name">地图视角</span><span class="tag">高德 · 中文路网</span></div>
+  <div class="sec"><span class="name">地图视角</span><span class="tag">__MAPSRC__</span></div>
   <div class="mapcard">
-    <img class="map-img" src="/nwmap/?lat=__LAT__&lon=__LON__&src=amap&k=__KEY__" alt="__PLACE__地图" loading="lazy"/>
+    <img class="map-img" src="/nwmap/?lat=__LAT__&lon=__LON__&k=__KEY__&v=43" alt="__PLACE__地图" loading="lazy"/>
     <div class="mapnote">__PLACE__ · 真实坐标</div>
   </div>
+
+  __ROADNET__
 
   <div class="sec"><span class="name">此刻看到的</span><span class="tag">__BIOME__</span></div>
   <div class="scene">
@@ -159,6 +188,22 @@
   <div class="sec"><span class="name">寄回来的明信片</span><span class="tag">__NPC__ 张</span></div>
   __POSTCARDS__
 
-  <div class="footer">乌有乡 · 一个身体，在一颗星球上 · v3.9</div>
+  <div class="footer">乌有乡 · 一个身体，在一颗星球上 · v4.8</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.tagName === 'IMG' && t.src.indexOf('/nwroad/') > -1) {
+      var box = document.createElement('div');
+      box.className = 'zoom-box';
+      var im = t.cloneNode();
+      im.className = 'zoom-img';
+      box.appendChild(im);
+      box.onclick = function(){ box.remove(); };
+      document.body.appendChild(box);
+    }
+  });
+})();
+</script>
 </body>
 </html>

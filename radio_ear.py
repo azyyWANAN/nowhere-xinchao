@@ -23,6 +23,10 @@ CN_BOOK = [
      "lat": 30.25, "lon": 120.15,
      "stream": "http://lhttp.qingting.fm/live/1163/64k.mp3",
      "genre": "城市综合 · 娱乐", "homepage": "https://www.qtfm.cn/radios/1163"},
+    {"name": "乌鲁木齐新闻广播", "city": "乌鲁木齐", "freq": "FM100.7",
+     "lat": 43.82, "lon": 87.62,
+     "stream": "http://lhttp.qingting.fm/live/1918/64k.mp3",
+     "genre": "新闻综合", "homepage": "https://www.qtfm.cn/radios/1918"},
 ]
 
 
