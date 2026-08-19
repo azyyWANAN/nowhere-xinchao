@@ -19,6 +19,14 @@ STATE = NOWHERE_HOME / "radio_ear.json"
 
 # 国内通讯录：蜻蜓FM live 编号 → 直播流。往后按城市往里加。
 CN_BOOK = [
+    {"name": "苏州都市音乐广播", "city": "苏州", "freq": "FM102.8",
+     "lat": 31.30, "lon": 120.62,
+     "stream": "http://lhttp.qingting.fm/live/2803/64k.mp3",
+     "genre": "music · 音乐", "homepage": "https://www.qtfm.cn/radios/2803"},
+    {"name": "苏州交通经济广播", "city": "苏州", "freq": "FM104.8",
+     "lat": 31.30, "lon": 120.62,
+     "stream": "http://lhttp.qingting.fm/live/2806/64k.mp3",
+     "genre": "traffic · 交通", "homepage": "https://www.qtfm.cn/radios/2806"},
     {"name": "西湖之声", "city": "杭州", "freq": "FM105.4",
      "lat": 30.25, "lon": 120.15,
      "stream": "http://lhttp.qingting.fm/live/1163/64k.mp3",
