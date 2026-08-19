@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """乌有乡旅程档案 · 手机网页版"""
-import json, html, os, pathlib
+import json, html, os, pathlib, secrets
 from urllib.request import urlopen, Request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
@@ -10,7 +10,7 @@ import datetime
 BASE = pathlib.Path(__file__).resolve().parent
 TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
-KEY = os.environ.get("NOWHERE_VIEW_KEY", "0e327405b636c97deebc5ae1")
+KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
 USER_NAME = os.environ.get("USER_NAME", "烟烟")
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
 
@@ -50,9 +50,23 @@ def _load(name):
 
 
 def _dest_short(place):
+    """邮票上的目的地：中文取拼音首字母，英文取词首字母。像真邮戳的缩写。"""
     parts = [x for x in place.split() if x][:2]
-    short = "".join(parts)
-    return short if short else place
+    if not parts:
+        return place
+    joined = "".join(parts)
+    has_cn = any("一" <= ch <= "鿿" for ch in joined)
+    if has_cn:
+        try:
+            from pypinyin import lazy_pinyin
+            return "".join(py[0].upper() for py in lazy_pinyin(joined) if py)
+        except Exception:
+            return joined
+    import re as _re
+    words = _re.findall(r"[A-Za-z]+", " ".join(parts))
+    if words:
+        return "".join(w[0].upper() for w in words)
+    return joined
 
 
 def _classify(place):
@@ -133,7 +147,7 @@ def _pick_city_letter(city):
 
 def _find_roadnet(lat, lon):
     """在路网目录里找离坐标最近的一张图，距离 < 0.15 度算命中。"""
-    _d = pathlib.Path("/home/ubuntu/.nowhere/roadnet")
+    _d = pathlib.Path(NOWHERE_HOME) / "roadnet"
     if not _d.is_dir():
         return None
     best, bestd = None, 1e9
