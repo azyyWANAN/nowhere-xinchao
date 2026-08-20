@@ -6,6 +6,16 @@
 
 <title>旅程档案 · 乌有乡</title>
 <style>
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;
+    src:url('/nwfonts/bodoni-moda-n400.woff2?k=__KEY__') format('woff2');}
+  @font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:700;font-display:swap;
+    src:url('/nwfonts/bodoni-moda-n700.woff2?k=__KEY__') format('woff2');}
+  @font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400;font-display:swap;
+    src:url('/nwfonts/bodoni-moda-i400.woff2?k=__KEY__') format('woff2');}
+  @font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:400;font-display:swap;
+    src:url('/nwfonts/noto-serif-sc-400.woff2?k=__KEY__') format('woff2');}
+  @font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:700;font-display:swap;
+    src:url('/nwfonts/noto-serif-sc-700.woff2?k=__KEY__') format('woff2');}
   :root{
     --bg:#99B6B2; --card:#FBFAF6; --dark:#2F3E3B;
     --gold:#C9B08A; --gold-dim:#DCC9A8; --brown:#8A7563;
@@ -13,7 +23,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{background:var(--bg);color:var(--text);
-    font-family:-apple-system,"PingFang SC","HarmonyOS Sans","Noto Sans CJK SC",sans-serif;
+    font-family:'Bodoni Moda','Noto Serif SC','Songti SC',STSong,'PingFang SC',serif;
     max-width:520px;margin:0 auto;padding:18px 16px 48px;
     line-height:1.65;}
   .topbar{display:flex;justify-content:space-between;align-items:baseline;
@@ -42,10 +52,10 @@
   .sec{display:flex;justify-content:space-between;align-items:baseline;
     margin:26px 0 10px;}
   .sec .name{font-size:16px;font-weight:700;letter-spacing:1px;color:#F4FAF8;}
-  .sec .tag{font-size:12px;color:#E0EBE8;}
+  .sec .tag{font-size:12px;color:#3f503b;letter-spacing:1px;}
 
   /* 此刻看到的 */
-  .scene{background:var(--card);border-radius:14px;padding:16px 16px 16px 20px;
+  .scene{background:var(--card);border-radius:14px;padding:16px 16px 24px 20px;
     box-shadow:0 2px 8px rgba(70,95,90,.14);position:relative;}
   .scene::before{content:"";position:absolute;left:10px;top:18px;bottom:18px;
     width:3px;border-radius:2px;background:linear-gradient(var(--gold),var(--gold-dim));}
@@ -54,13 +64,20 @@
   .radio{margin-top:12px;background:#F1EEE4;border-radius:10px;padding:10px 12px;
     display:flex;justify-content:space-between;align-items:center;}
   .radio .rname{font-weight:600;font-size:13px;}
-  .radio-btn-row{display:flex;justify-content:flex-start;margin:6px 0 12px;padding-left:6px;}
-  .radio-btn{display:inline-flex;flex-direction:column;align-items:center;
-    border:1.2px solid #3D5F36;border-radius:999px;padding:9px 6px;
-    text-decoration:none;color:#3D5F36;font-size:11px;font-weight:600;
-    letter-spacing:2px;line-height:1.35;transition:all .2s;}
-  .radio-btn:active{background:#3D5F36;color:#F1EEE4;}
-  .radio-btn:active span{color:#F1EEE4;}
+  .radio-btn-row{display:flex;justify-content:flex-start;margin:10px 0 18px;padding-left:2px;}
+  .radio-btn{display:inline-flex;flex-direction:row;align-items:center;gap:5px;
+    border:1px solid #3f503b;border-radius:999px;padding:5px 16px;
+    text-decoration:none;color:#3f503b;font-size:11px;font-weight:600;
+    letter-spacing:1.5px;line-height:1.4;transition:all .15s;
+    background:linear-gradient(180deg,#FDFBF5 0%,#EDE9DC 100%);
+    box-shadow:0 1px 2px rgba(63,80,59,.22),inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(63,80,59,.14);}
+  .radio a.radio-btn{border:1px solid #3f503b;color:#3f503b;padding:5px 16px;
+    font-size:11px;font-weight:600;letter-spacing:1.5px;
+    background:linear-gradient(180deg,#FDFBF5 0%,#EDE9DC 100%);
+    box-shadow:0 1px 2px rgba(63,80,59,.22),inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(63,80,59,.14);}
+  .radio-btn:active{background:#E7E2D4;color:#3f503b;
+    box-shadow:inset 0 1px 3px rgba(63,80,59,.28),inset 0 -1px 0 rgba(255,255,255,.6);}
+  .radio-btn:active span{color:#3f503b;}
   .ear-hint{text-align:center;font-size:10.5px;color:#3D5F36;letter-spacing:1.5px;margin-top:7px;}
   .ear .ear-m{text-align:center;}
   .radio .rgen{font-size:11px;color:var(--sub);}
@@ -70,7 +87,7 @@
   /* 头顶的天空 */
   .sky{font-size:12.5px;color:#EAF2F0;margin-top:10px;padding:0 4px;}
   .rfreq{font-size:11px;color:#8A7563;margin-left:4px;font-weight:500;}
-  .ear{margin-top:12px;background:#EDE9DC;border-radius:10px;padding:12px 14px;}
+  .ear{margin-top:14px;margin-bottom:4px;background:#EDE9DC;border-radius:10px;padding:12px 14px;}
   .ear .ear-h{font-size:12px;font-weight:700;color:#6B5D4A;margin-bottom:6px;letter-spacing:1px;}
   .ear p{font-size:13.5px;color:#4A443B;line-height:1.7;}
   .ear .ear-m{margin-top:8px;font-size:11px;color:#9A9184;}
@@ -95,7 +112,7 @@
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     background:#FDFBF5;color:var(--gold);position:relative;}
   .stamp::after{content:"";position:absolute;inset:2px;border:1px dashed rgba(200,176,138,.55);border-radius:4px;}
-  .stamp .air{font-size:9.5px;letter-spacing:2px;font-weight:700;}
+  .stamp .air{font-size:10px;letter-spacing:1px;font-weight:700;white-space:nowrap;}
   .stamp .dest{font-size:11px;font-weight:700;color:#7A6A55;margin-top:2px;
     max-width:86%;text-align:center;line-height:1.35;white-space:normal;word-break:break-all;overflow:visible;}
   .postmark{width:96px;height:96px;transform:rotate(-9deg);opacity:.88;}
@@ -103,6 +120,20 @@
   .pc-img{width:100%;border-radius:10px;margin-top:12px;box-shadow:0 2px 8px rgba(70,95,90,.18);display:block;}
   .pc-meta{margin-top:12px;padding-top:10px;border-top:1px solid #E8E2D2;
     font-size:11px;color:var(--sub);display:flex;justify-content:space-between;}
+  .pc-music{margin-top:12px;padding-top:10px;border-top:1px dashed #DCD5C4;}
+  .pc-music .pc-music-h{font-size:12px;font-weight:700;color:#6B5D4A;letter-spacing:1px;margin-bottom:6px;}
+  .pc-music .pc-music-t{font-size:13px;color:#4A443B;font-weight:700;margin-bottom:6px;}
+  .pc-music audio{width:90%;height:34px;display:block;margin:0 auto;}
+  .pc-music .pc-music-n{font-size:11.5px;color:#3f503b;margin-top:6px;font-style:italic;text-align:center;}
+  /* 折叠块：地图视角 */
+  .mapfold{margin:6px 0 14px;background:var(--card);border-radius:14px;padding:6px 16px 10px;
+    box-shadow:0 2px 8px rgba(70,95,90,.14);}
+  .fold-sum{font-size:14px;font-weight:700;color:#3A403D;padding:8px 0 6px;cursor:pointer;
+    list-style:none;display:block;overflow:hidden;}
+  .fold-sum::before{content:"▸";margin-right:6px;color:var(--brown);}
+  .fold-sum .ico,.shelf-sum .ico{display:inline-block;width:1.7em;text-align:left;font-style:normal;}
+  .mapfold[open] .fold-sum::before{content:"▾";}
+  .fold-sum .tag{font-size:10.5px;color:var(--sub);font-weight:400;letter-spacing:1px;float:right;margin-top:3px;}
   /* 地图视角 */
   .mapcard{background:var(--card);border-radius:14px;padding:8px;
     box-shadow:0 2px 8px rgba(70,95,90,.14);}
@@ -115,8 +146,8 @@
     box-shadow:0 1px 5px rgba(70,95,90,.18);}
   .rn-info{flex:1;min-width:0;}
   .rn-name{font-size:13.5px;font-weight:700;color:#4A443B;}
-  .rn-letter{font-size:12px;color:#7C8582;margin-top:2px;line-height:1.6;}
-  .rn-caption{font-size:13px;color:#4A443B;text-align:center;padding:10px 6px 4px;
+  .rn-letter{font-size:12px;color:#3f503b;margin-top:2px;line-height:1.6;}
+  .rn-caption{font-size:13px;color:#3f503b;text-align:center;padding:10px 6px 4px;
     line-height:1.8;letter-spacing:1px;}
   .ear-player audio{width:100%;height:34px;margin-top:6px;}
   @media (min-width:768px){
@@ -140,9 +171,9 @@
     box-shadow:0 8px 40px rgba(0,0,0,.5);}
   .footer{margin-top:34px;text-align:center;font-size:11px;color:#E0EBE8;
     letter-spacing:2px;}
-  .drawing-inner{display:flex;align-items:center;gap:10px;color:#9aa5b1;font-size:14px;padding:18px;justify-content:center;}
-  .drawing-dot{width:12px;height:12px;border-radius:50%;border:2px solid #c9b7a5;border-top-color:transparent;animation:nwspin 1s linear infinite;}
-  @keyframes nwspin{to{transform:rotate(360deg)}}
+.drawing-inner{display:flex;align-items:center;gap:10px;color:#9aa5b1;font-size:14px;padding:18px;justify-content:center;}
+.drawing-dot{width:12px;height:12px;border-radius:50%;border:2px solid #c9b7a5;border-top-color:transparent;animation:nwspin 1s linear infinite;}
+@keyframes nwspin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -165,13 +196,15 @@
     <div class="cell"><div class="k">脚下</div><div class="v">__SURFACE__</div></div>
   </div>
 
-  <div class="sec"><span class="name">地图视角</span><span class="tag">__MAPSRC__</span></div>
-  <div class="mapcard">
-    <img class="map-img" src="/nwmap/?lat=__LAT__&lon=__LON__&k=__KEY__&v=__V__" alt="__PLACE__地图" />
-    <div class="mapnote">__PLACE__ · 真实坐标</div>
-  </div>
-
-  __ROADNET__
+  <details class="mapfold" open>
+    <summary class="fold-sum"><span class="ico">&#127808;</span><span>地图视角</span><span class="tag">__MAPSRC__</span></summary>
+    <div class="mapcard">
+      <img class="map-img" loading="lazy" src="/nwmap/?lat=__LAT__&lon=__LON__&k=__KEY__&v=__V__" alt="__PLACE__地图" />
+      <div class="mapnote">__PLACE__ · 真实坐标</div>
+    </div>
+    __ROADNET_CURRENT__
+  </details>
+  __ROADNET_ALBUM__
 
   <div class="sec"><span class="name">此刻看到的</span><span class="tag">__BIOME__</span></div>
   <div class="scene">
@@ -191,7 +224,7 @@
   <div class="sec"><span class="name">寄回来的明信片</span><span class="tag">__NPC__ 张</span></div>
   __POSTCARDS__
 
-  <div class="footer">乌有乡 · 一个身体，在一颗星球上 · v4.8</div>
+  <div class="footer">乌有乡 · 一个身体，在一颗星球上 · v5.15</div>
 <script>
 (function(){
   document.addEventListener('click', function(e){

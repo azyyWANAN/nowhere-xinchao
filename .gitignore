@@ -9,3 +9,15 @@ archive/**
 __pycache__/
 *.pyc
 .DS_Store
+
+nwimg_config.json
+
+map_keys.env
+
+家底清单*
+
+img_map.json
+
+music.json
+
+postcards.json

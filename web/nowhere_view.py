@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """乌有乡旅程档案 · 手机网页版"""
-import json, html, os, pathlib, secrets, re, time
+import json, html, os, pathlib, re, time
+from city_abbr import CITY_ABBR
 import threading
 from urllib.request import urlopen, Request
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer, HTTPServer
 from urllib.parse import urlparse, parse_qs
 import datetime
 
 BASE = pathlib.Path(__file__).resolve().parent
 TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
-KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
-USER_NAME = os.environ.get("USER_NAME", "你")
+KEY = os.environ.get("NOWHERE_VIEW_KEY", "")
+USER_NAME = os.environ.get("USER_NAME", "烟烟")
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
 
 AMAP_KEY = ""
@@ -51,24 +52,36 @@ def _load(name):
 
 
 def _dest_short(place):
-    """邮票上的目的地：中文取拼音首字母，英文取词首字母。像真邮戳的缩写。"""
-    parts = [x for x in place.split() if x][:2]
-    if not parts:
-        return place
-    joined = "".join(parts)
-    has_cn = any("一" <= ch <= "鿿" for ch in joined)
-    if has_cn:
-        try:
-            from pypinyin import lazy_pinyin
-            return "".join(py[0].upper() for py in lazy_pinyin(joined) if py)
-        except Exception:
-            return joined
+    """邮票上的目的地缩写：优先查内置表（全设备一致），英文名取词首字母。"""
+    place = (place or "").strip()
+    if place in CITY_ABBR:
+        return CITY_ABBR[place]
+    _words = re.findall(r"[A-Za-z]+", place)
+    if _words:
+        return "".join(w[0].upper() for w in _words)[:4]
+    return place
     import re as _re
     words = _re.findall(r"[A-Za-z]+", " ".join(parts))
     if words:
         return "".join(w[0].upper() for w in words)
     return joined
 
+
+
+def _pc_music_html(place, book):
+    """明信片音乐条：按地点名查歌单，配好歌就显示播放条。"""
+    _m = (book or {}).get(place) or {}
+    if not _m.get("url"):
+        return ""
+    _url = _m["url"]
+    if _url.startswith("/"):
+        _url = _url + "?k=__KEY__"
+    _note = _m.get("note") or ""
+    _note_html = ('<div class="pc-music-n">' + esc(_note) + '</div>') if _note else ""
+    return ('<div class="pc-music">'
+            '<div class="pc-music-h">&#127925; 此刻想到的歌</div>'
+            '<div class="pc-music-t">' + esc(_m.get("title", "")) + ' · ' + esc(_m.get("artist", "")) + '</div>'
+            '<audio controls preload="none" src="' + esc(_url) + '"></audio>' + _note_html + '</div>')
 
 def _classify(place):
     """三连问：白名单城市 -> 城市词 -> 自然词 -> 脚下的地。返回(脚下, 标签)。"""
@@ -138,7 +151,17 @@ if _lp.exists():
         pass
 
 
+_CITY_MINE_PATH = pathlib.Path("/home/ubuntu/.nowhere/city_letters_mine.json")
+
 def _pick_city_letter(city):
+    """城信：先查我亲笔写的，查不到再掉回老模板池兜底。"""
+    try:
+        _mine = json.loads(_CITY_MINE_PATH.read_text(encoding="utf-8"))
+        _hit = (_mine or {}).get(city)
+        if _hit:
+            return _hit
+    except Exception:
+        pass
     pool = _LETTERS.get("city_letters") or []
     if not pool:
         return ""
@@ -148,7 +171,7 @@ def _pick_city_letter(city):
 
 def _find_roadnet(lat, lon):
     """在路网目录里找离坐标最近的一张图，距离 < 0.15 度算命中。"""
-    _d = pathlib.Path(NOWHERE_HOME) / "roadnet"
+    _d = pathlib.Path("/home/ubuntu/.nowhere/roadnet")
     if not _d.is_dir():
         return None
     best, bestd = None, 1e9
@@ -168,7 +191,7 @@ def _find_roadnet(lat, lon):
 
 def _kick_roadnet(lat, lon):
     """当前城市没有路网图：后台开画，画好刷新页面就能看见。防重复用标记文件。"""
-    _d = pathlib.Path(NOWHERE_HOME) / "roadnet"
+    _d = pathlib.Path("/home/ubuntu/.nowhere/roadnet")
     try:
         _d.mkdir(parents=True, exist_ok=True)
     except Exception:
@@ -183,9 +206,10 @@ def _kick_roadnet(lat, lon):
             _mark.write_text("drawing", encoding="utf-8")
             import subprocess
             import sys
-            _script = pathlib.Path(__file__).resolve().parent.parent / "roadnet.py"
+            _script = pathlib.Path("/home/ubuntu/apps/nowhere/roadnet.py")
+            _surf = str(j.get("last_surface") or t.get("surface") or "")
             subprocess.run([sys.executable, str(_script), str(lat), str(lon),
-                            "auto", "8000", str(_png)], timeout=240, check=False)
+                            "auto", "8000", str(_png), _surf], timeout=240, check=False)
         except Exception:
             pass
         finally:
@@ -205,6 +229,8 @@ def render():
     j = _load("journey.json") or {}
     pcs = _load("postcards.json") or {"items": []}
     lands = _load("landings.json") or {}
+    IMG_MAP = _load("img_map.json") or {}
+    MUSIC_BOOK = _load("music.json") or {}
     ear = _load("radio_ear.json") or {}
 
     pos = j.get("pos", [0, 0])
@@ -222,7 +248,7 @@ def render():
     radio_btn = ""
     if radio.get("name") and radio.get("homepage"):
         radio_btn = ('<div class="radio-btn-row"><a class="radio-btn" href="' + esc(radio["homepage"]) + '" target="_blank">'
-                     '<span>打</span><span>开</span><span>电</span><span>台</span></a></div>')
+                     '<span>打开电台</span></a></div>')
     heard = ear.get("heard") or {}
     _loc = ear.get("located") or {}
     _lla, _llo = _loc.get("lat"), _loc.get("lon")
@@ -260,7 +286,7 @@ def render():
     scenes = j.get("recent_scenes") or []
     if j.get("last_text"):
         # 判重按句子粒度：last_text 里凡是已存在于 scenes 的句子都滤掉，只追新句。
-        # 修复：探索类动作会把已存 scene 整段再带进 last_text，导致“此刻看到的”重复渲染。
+        # 修复：探索类动作会把已存 scene 整段再带��� last_text，导致“此刻看到的”重复渲染。
         _pool = "".join(scenes)
         _new_parts = []
         for _part in re.split(r"[。\n]+", j["last_text"]):
@@ -307,7 +333,7 @@ def render():
     narr = j.get("narrative") or {}
     if narr.get("distance_walked"):
         d = narr.get("direction") or ""
-        verb = f"朝{d}走了" if d else "向前走了"
+        verb = f'朝{d}走了' if d else '向前走了'
         items.append(("", f"{verb} {narr['distance_walked'] / 1000:.1f} km"))
     for pc in pcs.get("items", []):
         st = pc.get("stamp") or {}
@@ -377,13 +403,17 @@ def render():
         st = pc.get("stamp") or {}
         lt = st.get("local_time") or ""
         _fi = pc.get("front_img") or ""
-        _img_html = f'<img class="pc-img" src="/nwimg/{_fi.split("/")[-1]}?k=__KEY__" alt="明信片正面"/>' if _fi else ""
+        _mi = (IMG_MAP or {}).get(pc.get("stamp", {}).get("place", "")) or ""
+        if _mi:
+            _fi = _mi
+        _img_html = f'<img class="pc-img" loading="lazy" src="/nwimg/{_fi.split("/")[-1]}?k=__KEY__" alt="明信片正面"/>' if _fi else ""
         _pm = pm_svg(idx, esc(st.get("place", "")), lt, st.get("lat", 0) or 0, st.get("lon", 0) or 0)
         return ('<div class="postcard"><div class="mail"><div class="pc-body">' + esc(pc.get("text", "")) +
                 '</div><div class="pc-side"><div class="stamp"><span class="air">AIR MAIL</span><span class="dest">' +
                 esc(_dest_short(st.get("place", ""))) + '</span></div>' + _pm + '</div></div>' + _img_html +
                 '<div class="pc-meta"><span>' + str(st.get("lat", "?")) + '°N, ' + str(st.get("lon", "?")) + '°E</span><span>' +
-                esc(st.get("weather", "")) + ' · ' + str(st.get("temp_c", "?")) + '°C</span></div></div>')
+                esc(st.get("weather", "")) + ' · ' + str(st.get("temp_c", "?")) + '°C</span></div>' +
+                _pc_music_html(pc.get("stamp", {}).get("place", ""), MUSIC_BOOK) + '</div>')
 
     all_pcs = pcs.get("items", [])
     recent, older = all_pcs[-3:], all_pcs[:-3]
@@ -450,6 +480,7 @@ def render():
     _add_mp(lat, lon, place)
     _mapdata = _json.dumps(_mp, ensure_ascii=False)
 
+    _kick_roadnet(lat, lon)
     _rn_key = "%.2f_%.2f" % (lat, lon)
     _rn_path = _find_roadnet(lat, lon)
     if _rn_path is not None:
@@ -458,7 +489,6 @@ def render():
                         '<div class="rn-caption">' + esc(_pick_city_letter(place)) + '</div>'
                         '<div class="mapnote">' + esc(place) + '</div></div>')
     else:
-        _kick_roadnet(lat, lon)
         roadnet_html = ('<div class="sec"><span class="name">城市路网</span><span class="tag">城写下的情书</span></div>'
                         '<div class="mapcard drawing"><div class="drawing-inner">'
                         '<span class="drawing-dot"></span>正在为你画「' + esc(place) + '」的路网，大约一两分钟，稍后刷新就能看见。</div></div>')
@@ -477,16 +507,15 @@ def render():
             continue
         if _f2 is not None:
             _rn_items.append((_name, _la, _lo, ""))
-    _rn_book = ""
+    roadnet_album = ""
     if _rn_items:
-        _rn_book = '<details class="shelf"><summary class="shelf-sum">&#127808; 沿途城的信（%d 封）</summary>' % len(_rn_items)
+        roadnet_album = '<details class="shelf"><summary class="shelf-sum"><span class="ico">&#127808;</span>实景相册 · 沿途城的信（%d 封）</summary>' % len(_rn_items)
         for _name, _la, _lo, _key in _rn_items:
             _letter = _pick_city_letter(_name)
-            _rn_book += ('<div class="rn-item"><img class="rn-thumb" src="/nwroad/?lat=%.4f&lon=%.4f&t=1&k=__KEY__" alt="路网"/>'
-                         '<div class="rn-info"><div class="rn-name">%s</div><div class="rn-letter">%s</div></div></div>'
-                         % (_la, _lo, esc(_name), esc(_letter)))
-        _rn_book += '</details>'
-    roadnet_html += _rn_book
+            roadnet_album += ('<div class="rn-item"><img class="rn-thumb" src="/nwroad/?lat=%.4f&lon=%.4f&t=1&k=__KEY__" alt="路网"/>'
+                              '<div class="rn-info"><div class="rn-name">%s</div><div class="rn-letter">%s</div></div></div>'
+                              % (_la, _lo, esc(_name), esc(_letter)))
+        roadnet_album += '</details>' 
 
     html = (TPL
             .replace("__UPD__", esc(upd))
@@ -512,8 +541,8 @@ def render():
             .replace("__SKY__", esc(sky_html))
             .replace("__STEPS__", str(len(items)))
             .replace("__MAPDATA__", _mapdata)
-            .replace("__ROADNET__", roadnet_html)
-            .replace("__MAPSRC__", "OpenStreetMap · 全球路网" if (lon < 73 or lon > 135 or lat < 18 or lat > 54) else "高德 · 中文路网")
+            .replace("__ROADNET_CURRENT__", roadnet_html).replace("__ROADNET_ALBUM__", roadnet_album)
+            .replace("__MAPSRC__", "OpenStreetMap · 全球路网")
             .replace("__TIMELINE__", tl)
             .replace("__NPC__", str(len(pcs.get("items", []))))
             .replace("__POSTCARDS__", pc_html).replace("__KEY__", KEY).replace("__V__", str(int(time.time()))))
@@ -521,6 +550,7 @@ def render():
 
 
 class H(BaseHTTPRequestHandler):
+    timeout = 120
     def do_GET(self):
         path = urlparse(self.path).path
         q = parse_qs(urlparse(self.path).query)
@@ -563,12 +593,63 @@ class H(BaseHTTPRequestHandler):
                     _ct = "image/png"
                 self.send_response(200)
                 self.send_header("Content-Type", _ct)
+                self.send_header("Cache-Control", "public, max-age=604800")
                 self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
                 self.wfile.write(data)
             except Exception:
                 body = b""
+                self.send_response(404)
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+            return
+        if path.startswith("/nwfonts"):
+            try:
+                _fname = pathlib.Path(urlparse(self.path).path).name
+                if not _fname.endswith(".woff2"):
+                    raise ValueError(_fname)
+                _fp = pathlib.Path("/home/ubuntu/apps/nowhere/web/fonts") / _fname
+                _data = _fp.read_bytes()
+                self.send_response(200)
+                self.send_header("Content-Type", "font/woff2")
+                self.send_header("Cache-Control", "public, max-age=86400")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_header("Content-Length", str(len(_data)))
+                self.end_headers()
+                self.wfile.write(_data)
+            except Exception:
+                self.send_response(404)
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+            return
+        if path.startswith("/nwmusic"):
+            try:
+                _mname = pathlib.Path(urlparse(self.path).path).name
+                if not _mname.endswith(".mp3"):
+                    raise ValueError(_mname)
+                _fp = pathlib.Path("/home/ubuntu/.nowhere/music") / _mname
+                _data = _fp.read_bytes()
+                _rng = self.headers.get("Range")
+                if _rng and _rng.startswith("bytes="):
+                    _b = _rng[6:].split("-")
+                    _start = int(_b[0]) if _b[0] else 0
+                    _end = int(_b[1]) if len(_b) > 1 and _b[1] else len(_data) - 1
+                    _end = min(_end, len(_data) - 1)
+                    self.send_response(206)
+                    self.send_header("Content-Type", "audio/mpeg")
+                    self.send_header("Content-Range", "bytes {}-{}/{}".format(_start, _end, len(_data)))
+                    self.send_header("Content-Length", str(_end - _start + 1))
+                    self.end_headers()
+                    self.wfile.write(_data[_start:_end + 1])
+                else:
+                    self.send_response(200)
+                    self.send_header("Content-Type", "audio/mpeg")
+                    self.send_header("Accept-Ranges", "bytes")
+                    self.send_header("Content-Length", str(len(_data)))
+                    self.end_headers()
+                    self.wfile.write(_data)
+            except Exception:
                 self.send_response(404)
                 self.send_header("Content-Length", "0")
                 self.end_headers()
@@ -592,6 +673,7 @@ class H(BaseHTTPRequestHandler):
                 data = _rf.read_bytes()
                 self.send_response(200)
                 self.send_header("Content-Type", _ct)
+                self.send_header("Cache-Control", "public, max-age=604800")
                 self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
@@ -617,31 +699,15 @@ class H(BaseHTTPRequestHandler):
                 self.send_header("Content-Length", "0")
                 self.end_headers()
             return
-        if path.startswith("/nwmap") and AMAP_KEY:
+        if path.startswith("/nwmap"):
             try:
                 lat = float(q.get("lat", ["0"])[0])
                 lon = float(q.get("lon", ["0"])[0])
-                z = q.get("zoom", ["12"])[0]
-                mu = ("https://restapi.amap.com/v3/staticmap"
-                      "?location=" + str(lon) + "," + str(lat) + "&zoom=" + z +
-                      "&size=750*420&markers=mid,0x9E3B3B,A:" + str(lon) + "," + str(lat) +
-                      "&key=" + AMAP_KEY)
-                _path = q.get("path", [""])[0]
-                if _path:
-                    mu += "&path=" + _path
-                req = Request(mu, headers={"User-Agent": "Mozilla/5.0"})
-                try:
-                    data = urlopen(req, timeout=15).read()
-                except Exception:
-                    data = b""
-                if len(data) < 5000:
-                    _osm = _osm_tile_map(lat, lon)
-                    if _osm:
-                        data = _osm
+                data = _osm_tile_map(lat, lon) or b""
                 self.send_response(200)
                 self.send_header("Content-Type", "image/png")
-                self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("Cache-Control", "no-store")
+                self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
                 self.wfile.write(data)
