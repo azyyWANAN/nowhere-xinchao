@@ -1,0 +1,810 @@
+{
+ "圣托里尼": {
+  "lat": 36.3932,
+  "lon": 25.4615,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "蓝顶白墙与爱琴海日落",
+  "family": "海岛"
+ },
+ "米科诺斯": {
+  "lat": 37.4493,
+  "lon": 25.3807,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "白风车与不眠的小岛",
+  "family": "海岛"
+ },
+ "克里特岛": {
+  "lat": 35.2052,
+  "lon": 24.9031,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "米诺斯迷宫与橄榄林",
+  "family": "海岛"
+ },
+ "罗德岛": {
+  "lat": 36.1961,
+  "lon": 27.9608,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "骑士城堡与爱琴海东岸",
+  "family": "海岛"
+ },
+ "科孚岛": {
+  "lat": 39.5983,
+  "lon": 19.8523,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "威尼斯老城与翡翠海湾",
+  "family": "海岛"
+ },
+ "西西里岛": {
+  "lat": 37.623,
+  "lon": 13.9346,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "火山、柠檬与巴洛克",
+  "family": "海岛"
+ },
+ "撒丁岛": {
+  "lat": 40.0,
+  "lon": 9.0,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "祖母绿海水与野性海岸",
+  "family": "海岛"
+ },
+ "马略卡岛": {
+  "lat": 39.6078,
+  "lon": 3.012,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "海湾、柑橘与肖邦的冬天",
+  "family": "海岛"
+ },
+ "伊维萨岛": {
+  "lat": 38.9088,
+  "lon": 1.433,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "白色老城与日落派对",
+  "family": "海岛"
+ },
+ "马耳他": {
+  "lat": 35.8818,
+  "lon": 14.4491,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "蜂蜜色石头城与碧海",
+  "family": "海岛"
+ },
+ "巴厘岛": {
+  "lat": -8.3333,
+  "lon": 115.0,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "稻田、神庙与印度洋的浪",
+  "family": "海岛"
+ },
+ "龙目岛": {
+  "lat": -8.5729,
+  "lon": 116.3438,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "林贾尼火山下的安静沙滩",
+  "family": "海岛"
+ },
+ "普吉岛": {
+  "lat": 7.8906,
+  "lon": 98.3981,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "安达曼海的落日",
+  "family": "海岛"
+ },
+ "苏梅岛": {
+  "lat": 9.512,
+  "lon": 100.0136,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "椰林与月牙湾",
+  "family": "海岛"
+ },
+ "兰卡威": {
+  "lat": 6.3561,
+  "lon": 99.7837,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "天空之桥与雨林海岛",
+  "family": "海岛"
+ },
+ "马尔代夫": {
+  "lat": 4.1752,
+  "lon": 73.5089,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "水上屋与白沙蓝海",
+  "family": "海岛"
+ },
+ "塞舌尔": {
+  "lat": -4.5833,
+  "lon": 55.6667,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "花岗岩巨石的秘密海滩",
+  "family": "海岛"
+ },
+ "毛里求斯": {
+  "lat": -20.3,
+  "lon": 57.5833,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "甘蔗田与七色土",
+  "family": "海岛"
+ },
+ "留尼汪": {
+  "lat": -21.1143,
+  "lon": 55.5476,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "印度洋上的火山岛",
+  "family": "海岛"
+ },
+ "斐济": {
+  "lat": -17.7134,
+  "lon": 178.065,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "南太平洋的蜜月起点",
+  "family": "海岛"
+ },
+ "大溪地": {
+  "lat": -17.656,
+  "lon": -149.4192,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "黑沙滩与高更的岛",
+  "family": "海岛"
+ },
+ "波拉波拉": {
+  "lat": -16.4996,
+  "lon": -151.7371,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环礁湖的蓝",
+  "family": "海岛"
+ },
+ "夏威夷": {
+  "lat": 20.7878,
+  "lon": -156.3861,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "火山、彩虹与草裙舞",
+  "family": "海岛"
+ },
+ "冲绳": {
+  "lat": 26.5,
+  "lon": 127.9333,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "珊瑚海与慢生活",
+  "family": "海岛"
+ },
+ "济州岛": {
+  "lat": 33.4996,
+  "lon": 126.5312,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "汉拿山与油菜花",
+  "family": "海岛"
+ },
+ "富士山": {
+  "lat": 35.3606,
+  "lon": 138.7274,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "雪顶火山与五湖倒影",
+  "family": "火山奇观"
+ },
+ "维苏威火山": {
+  "lat": 40.8226,
+  "lon": 14.4292,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "庞贝上空的火山",
+  "family": "火山奇观"
+ },
+ "埃特纳火山": {
+  "lat": 37.7506,
+  "lon": 14.9937,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "西西里的活火山",
+  "family": "火山奇观"
+ },
+ "乞力马扎罗": {
+  "lat": -3.4,
+  "lon": 39.95,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "赤道雪顶",
+  "family": "火山奇观"
+ },
+ "基拉韦厄火山": {
+  "lat": 19.4086,
+  "lon": -155.2833,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "世界上最活跃的火山",
+  "family": "火山奇观"
+ },
+ "马特洪峰": {
+  "lat": 45.9764,
+  "lon": 7.6586,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "瑞士的尖角雪山",
+  "family": "火山奇观"
+ },
+ "少女峰": {
+  "lat": 46.5368,
+  "lon": 7.9626,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "欧洲之巅的少女",
+  "family": "火山奇观"
+ },
+ "黄山": {
+  "lat": 29.7114,
+  "lon": 118.3125,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "云海与迎客松",
+  "family": "火山奇观"
+ },
+ "泰山": {
+  "lat": 36.255,
+  "lon": 117.1008,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "五岳之首的日出",
+  "family": "火山奇观"
+ },
+ "玉龙雪山": {
+  "lat": 27.0995,
+  "lon": 100.1776,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "丽江的雪顶背景",
+  "family": "火山奇观"
+ },
+ "张家界": {
+  "lat": 29.1294,
+  "lon": 110.4783,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "阿凡达的悬浮山",
+  "family": "火山奇观"
+ },
+ "稻城亚丁": {
+  "lat": 28.437,
+  "lon": 100.313,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "最后的香格里拉",
+  "family": "火山奇观"
+ },
+ "泸沽湖": {
+  "lat": 27.708,
+  "lon": 100.8,
+  "surface": "water_fresh",
+  "biome": "mountain",
+  "vibe": "摩梭人的女儿国",
+  "family": "火山奇观"
+ },
+ "茶卡盐湖": {
+  "lat": 36.704,
+  "lon": 99.106,
+  "surface": "bare",
+  "biome": "desert",
+  "vibe": "天空之镜",
+  "family": "火山奇观"
+ },
+ "青海湖": {
+  "lat": 36.894,
+  "lon": 100.186,
+  "surface": "water_fresh",
+  "biome": "mountain",
+  "vibe": "高原上的海",
+  "family": "火山奇观"
+ },
+ "尼亚加拉瀑布": {
+  "lat": 43.0834,
+  "lon": -79.0663,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "马蹄形的轰鸣",
+  "family": "火山奇观"
+ },
+ "伊瓜苏瀑布": {
+  "lat": -25.6953,
+  "lon": -54.4367,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "南美的轰鸣水幕",
+  "family": "火山奇观"
+ },
+ "维多利亚瀑布": {
+  "lat": -17.9328,
+  "lon": 25.8307,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "雷霆之雾",
+  "family": "火山奇观"
+ },
+ "大堡礁": {
+  "lat": -17.9872,
+  "lon": 146.7698,
+  "surface": "water_ocean",
+  "biome": "island",
+  "vibe": "珊瑚海的活画卷",
+  "family": "火山奇观"
+ },
+ "冰岛蓝湖": {
+  "lat": 63.8798,
+  "lon": -22.4487,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "火山温泉的牛奶蓝",
+  "family": "火山奇观"
+ },
+ "哈尔施塔特": {
+  "lat": 47.5623,
+  "lon": 13.6491,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "湖边木屋与盐矿",
+  "family": "小镇"
+ },
+ "五渔村": {
+  "lat": 44.126,
+  "lon": 9.709,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "悬崖上的彩色渔村",
+  "family": "小镇"
+ },
+ "科尔马": {
+  "lat": 48.0808,
+  "lon": 7.3558,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "木筋房与葡萄酒",
+  "family": "小镇"
+ },
+ "布拉诺岛": {
+  "lat": 45.4855,
+  "lon": 12.417,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "彩虹色的房子",
+  "family": "小镇"
+ },
+ "羊角村": {
+  "lat": 52.74,
+  "lon": 6.0792,
+  "surface": "water_fresh",
+  "biome": "wetland",
+  "vibe": "没有路只有水的小镇",
+  "family": "小镇"
+ },
+ "皇后镇": {
+  "lat": -45.0333,
+  "lon": 168.6667,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "瓦卡蒂普湖畔的冒险城",
+  "family": "小镇"
+ },
+ "茵特拉肯": {
+  "lat": 46.6839,
+  "lon": 7.8664,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "两湖之间的少女峰门户",
+  "family": "小镇"
+ },
+ "罗腾堡": {
+  "lat": 49.3771,
+  "lon": 10.1791,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "中世纪的童话城墙",
+  "family": "小镇"
+ },
+ "克鲁姆洛夫": {
+  "lat": 48.8127,
+  "lon": 14.3176,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "伏尔塔瓦河的童话小镇",
+  "family": "小镇"
+ },
+ "圣米歇尔山": {
+  "lat": 48.636,
+  "lon": -1.5114,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "潮汐间的修道院",
+  "family": "小镇"
+ },
+ "阿马尔菲": {
+  "lat": 40.6349,
+  "lon": 14.6024,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "悬崖公路与柠檬",
+  "family": "小镇"
+ },
+ "波西塔诺": {
+  "lat": 40.6283,
+  "lon": 14.4843,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "垂直生长的彩色小镇",
+  "family": "小镇"
+ },
+ "丽江": {
+  "lat": 26.8688,
+  "lon": 100.2207,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "雪山脚下的古城",
+  "family": "小镇"
+ },
+ "大理": {
+  "lat": 25.5847,
+  "lon": 100.2123,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "苍山洱海风花雪月",
+  "family": "小镇"
+ },
+ "乌镇": {
+  "lat": 30.7454,
+  "lon": 120.4851,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "枕水人家",
+  "family": "小镇"
+ },
+ "平遥": {
+  "lat": 37.201,
+  "lon": 112.177,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "保存最完整的古城墙",
+  "family": "小镇"
+ },
+ "凤凰古城": {
+  "lat": 29.2523,
+  "lon": 109.8602,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "沱江边的吊脚楼",
+  "family": "小镇"
+ },
+ "西塘": {
+  "lat": 31.5833,
+  "lon": 119.2889,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "烟雨长廊",
+  "family": "小镇"
+ },
+ "婺源": {
+  "lat": 29.2497,
+  "lon": 117.8547,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "油菜花与徽派村落",
+  "family": "小镇"
+ },
+ "禾木": {
+  "lat": 48.573,
+  "lon": 87.434,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "图瓦人的雪乡",
+  "family": "小镇"
+ },
+ "巴黎": {
+  "lat": 48.8534,
+  "lon": 2.3486,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "塞纳河与铁塔",
+  "family": "城市"
+ },
+ "威尼斯": {
+  "lat": 45.4371,
+  "lon": 12.3326,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "水巷与贡多拉",
+  "family": "城市"
+ },
+ "布拉格": {
+  "lat": 50.088,
+  "lon": 14.4208,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "查理大桥的黄昏",
+  "family": "城市"
+ },
+ "巴塞罗那": {
+  "lat": 41.3888,
+  "lon": 2.159,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "高迪之城与海",
+  "family": "城市"
+ },
+ "罗马": {
+  "lat": 41.8919,
+  "lon": 12.5113,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "喷泉、广场与永恒",
+  "family": "城市"
+ },
+ "佛罗伦萨": {
+  "lat": 43.7792,
+  "lon": 11.2463,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "文艺复兴的摇篮",
+  "family": "城市"
+ },
+ "米兰": {
+  "lat": 45.4643,
+  "lon": 9.1895,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "大教堂与时尚",
+  "family": "城市"
+ },
+ "维也纳": {
+  "lat": 48.2085,
+  "lon": 16.3721,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "金色大厅与咖啡香",
+  "family": "城市"
+ },
+ "布达佩斯": {
+  "lat": 47.5,
+  "lon": 19.0833,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "多瑙河上的双子城",
+  "family": "城市"
+ },
+ "里斯本": {
+  "lat": 38.7251,
+  "lon": -9.1498,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "电车与法朵",
+  "family": "城市"
+ },
+ "波尔图": {
+  "lat": 42.6515,
+  "lon": -7.7126,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "杜罗河与酒窖",
+  "family": "城市"
+ },
+ "阿姆斯特丹": {
+  "lat": 50.9449,
+  "lon": 6.9553,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "运河与自行车",
+  "family": "城市"
+ },
+ "布鲁日": {
+  "lat": 51.2093,
+  "lon": 3.2247,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "北方的威尼斯",
+  "family": "城市"
+ },
+ "爱丁堡": {
+  "lat": 55.9521,
+  "lon": -3.1965,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "城堡与风笛",
+  "family": "城市"
+ },
+ "伦敦": {
+  "lat": 51.5085,
+  "lon": -0.1257,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "泰晤士河与红巴士",
+  "family": "城市"
+ },
+ "哥本哈根": {
+  "lat": 55.6759,
+  "lon": 12.5655,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "美人鱼与自行车道",
+  "family": "城市"
+ },
+ "斯德哥尔摩": {
+  "lat": 60.1572,
+  "lon": 20.5217,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "群岛之间的北欧之光",
+  "family": "城市"
+ },
+ "雷克雅未克": {
+  "lat": 64.1466,
+  "lon": -21.9426,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "极光与地热",
+  "family": "城市"
+ },
+ "伊斯坦布尔": {
+  "lat": 41.0138,
+  "lon": 28.9497,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "两洲之间的香料城",
+  "family": "城市"
+ },
+ "迪拜": {
+  "lat": 25.0772,
+  "lon": 55.3093,
+  "surface": "urban",
+  "biome": "desert",
+  "vibe": "沙漠里的未来城",
+  "family": "城市"
+ },
+ "京都": {
+  "lat": 35.0211,
+  "lon": 135.7538,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "古都与红叶",
+  "family": "城市"
+ },
+ "奈良": {
+  "lat": 34.6851,
+  "lon": 135.8048,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "鹿与古寺",
+  "family": "城市"
+ },
+ "东京": {
+  "lat": 35.6895,
+  "lon": 139.6917,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "霓虹与樱花",
+  "family": "城市"
+ },
+ "首尔": {
+  "lat": 37.5833,
+  "lon": 127.0,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "汉江与宫墙",
+  "family": "城市"
+ },
+ "清迈": {
+  "lat": 18.7904,
+  "lon": 98.9847,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "古城与山间",
+  "family": "城市"
+ },
+ "曼谷": {
+  "lat": 13.8772,
+  "lon": 100.7199,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "湄南河与夜市",
+  "family": "城市"
+ },
+ "新加坡": {
+  "lat": 1.2897,
+  "lon": 103.8501,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "花园城市",
+  "family": "城市"
+ },
+ "香港": {
+  "lat": 22.2783,
+  "lon": 114.1747,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "维港灯火",
+  "family": "城市"
+ },
+ "台北": {
+  "lat": 25.0531,
+  "lon": 121.5264,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "夜市与101",
+  "family": "城市"
+ },
+ "上海": {
+  "lat": 31.2222,
+  "lon": 121.4581,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "外滩与梧桐",
+  "family": "城市"
+ },
+ "杭州": {
+  "lat": 30.2936,
+  "lon": 120.1614,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "西湖与断桥",
+  "family": "城市"
+ },
+ "苏州": {
+  "lat": 31.3041,
+  "lon": 120.5954,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "园林与评弹",
+  "family": "城市"
+ },
+ "南京": {
+  "lat": 32.0617,
+  "lon": 118.7778,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "梧桐与秦淮",
+  "family": "城市"
+ },
+ "成都": {
+  "lat": 30.6667,
+  "lon": 104.0667,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "熊猫与火锅",
+  "family": "城市"
+ },
+ "重庆": {
+  "lat": 29.5603,
+  "lon": 106.5577,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "8D魔幻山城",
+  "family": "城市"
+ },
+ "厦门": {
+  "lat": 24.4798,
+  "lon": 118.0819,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "鼓浪屿与三角梅",
+  "family": "城市"
+ }
+}
