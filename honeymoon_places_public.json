@@ -1,0 +1,4682 @@
+{
+ "Santorini": {
+  "name_cn": "圣托里尼",
+  "lat": 36.3932,
+  "lon": 25.4615,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "蓝顶白墙与爱琴海日落",
+  "family": "海岛"
+ },
+ "Mykonos": {
+  "name_cn": "米科诺斯",
+  "lat": 37.4493,
+  "lon": 25.3807,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "白风车与不眠的小岛",
+  "family": "海岛"
+ },
+ "Crete": {
+  "name_cn": "克里特岛",
+  "lat": 35.2052,
+  "lon": 24.9031,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "米诺斯迷宫与橄榄林",
+  "family": "海岛"
+ },
+ "Rhodes": {
+  "name_cn": "罗德岛",
+  "lat": 36.1961,
+  "lon": 27.9608,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "骑士城堡与爱琴海东岸",
+  "family": "海岛"
+ },
+ "Corfu": {
+  "name_cn": "科孚岛",
+  "lat": 39.5983,
+  "lon": 19.8523,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "威尼斯老城与翡翠海湾",
+  "family": "海岛"
+ },
+ "Sicily": {
+  "name_cn": "西西里岛",
+  "lat": 37.623,
+  "lon": 13.9346,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "火山、柠檬与巴洛克",
+  "family": "海岛"
+ },
+ "Sardinia": {
+  "name_cn": "撒丁岛",
+  "lat": 40.0,
+  "lon": 9.0,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "祖母绿海水与野性海岸",
+  "family": "海岛"
+ },
+ "Mallorca": {
+  "name_cn": "马略卡岛",
+  "lat": 39.6078,
+  "lon": 3.012,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "海湾、柑橘与肖邦的冬天",
+  "family": "海岛"
+ },
+ "Ibiza": {
+  "name_cn": "伊维萨岛",
+  "lat": 38.9088,
+  "lon": 1.433,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "白色老城与日落派对",
+  "family": "海岛"
+ },
+ "Malta": {
+  "name_cn": "马耳他",
+  "lat": 35.8818,
+  "lon": 14.4491,
+  "surface": "rock",
+  "biome": "island",
+  "vibe": "蜂蜜色石头城与碧海",
+  "family": "海岛"
+ },
+ "Bali": {
+  "name_cn": "巴厘岛",
+  "lat": -8.3333,
+  "lon": 115.0,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "稻田、神庙与印度洋的浪",
+  "family": "海岛"
+ },
+ "Lombok": {
+  "name_cn": "龙目岛",
+  "lat": -8.5729,
+  "lon": 116.3438,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "林贾尼火山下的安静沙滩",
+  "family": "海岛"
+ },
+ "Phuket": {
+  "name_cn": "普吉岛",
+  "lat": 7.8906,
+  "lon": 98.3981,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "安达曼海的落日",
+  "family": "海岛"
+ },
+ "Koh Samui": {
+  "name_cn": "苏梅岛",
+  "lat": 9.512,
+  "lon": 100.0136,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "椰林与月牙湾",
+  "family": "海岛"
+ },
+ "Langkawi": {
+  "name_cn": "兰卡威",
+  "lat": 6.3561,
+  "lon": 99.7837,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "天空之桥与雨林海岛",
+  "family": "海岛"
+ },
+ "Maldives": {
+  "name_cn": "马尔代夫",
+  "lat": 4.1752,
+  "lon": 73.5089,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "水上屋与白沙蓝海",
+  "family": "海岛"
+ },
+ "Seychelles": {
+  "name_cn": "塞舌尔",
+  "lat": -4.5833,
+  "lon": 55.6667,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "花岗岩巨石的秘密海滩",
+  "family": "海岛"
+ },
+ "Mauritius": {
+  "name_cn": "毛里求斯",
+  "lat": -20.3,
+  "lon": 57.5833,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "甘蔗田与七色土",
+  "family": "海岛"
+ },
+ "Reunion": {
+  "name_cn": "留尼汪",
+  "lat": -21.1143,
+  "lon": 55.5476,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "印度洋上的火山岛",
+  "family": "海岛"
+ },
+ "Fiji": {
+  "name_cn": "斐济",
+  "lat": -17.7134,
+  "lon": 178.065,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "南太平洋的蜜月起点",
+  "family": "海岛"
+ },
+ "Tahiti": {
+  "name_cn": "大溪地",
+  "lat": -17.656,
+  "lon": -149.4192,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "黑沙滩与高更的岛",
+  "family": "海岛"
+ },
+ "Bora Bora": {
+  "name_cn": "波拉波拉",
+  "lat": -16.4996,
+  "lon": -151.7371,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环礁湖的蓝",
+  "family": "海岛"
+ },
+ "Hawaii": {
+  "name_cn": "夏威夷",
+  "lat": 20.7878,
+  "lon": -156.3861,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "火山、彩虹与草裙舞",
+  "family": "海岛"
+ },
+ "Okinawa": {
+  "name_cn": "冲绳",
+  "lat": 26.5,
+  "lon": 127.9333,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "珊瑚海与慢生活",
+  "family": "海岛"
+ },
+ "Jeju": {
+  "name_cn": "济州岛",
+  "lat": 33.4996,
+  "lon": 126.5312,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "汉拿山与油菜花",
+  "family": "海岛"
+ },
+ "Mount Fuji": {
+  "name_cn": "富士山",
+  "lat": 35.3606,
+  "lon": 138.7274,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "雪顶火山与五湖倒影",
+  "family": "火山奇观"
+ },
+ "Vesuvius": {
+  "name_cn": "维苏威火山",
+  "lat": 40.8226,
+  "lon": 14.4292,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "庞贝上空的火山",
+  "family": "火山奇观"
+ },
+ "Mount Etna": {
+  "name_cn": "埃特纳火山",
+  "lat": 37.7506,
+  "lon": 14.9937,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "西西里的活火山",
+  "family": "火山奇观"
+ },
+ "Kilimanjaro": {
+  "name_cn": "乞力马扎罗",
+  "lat": -3.4,
+  "lon": 39.95,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "赤道雪顶",
+  "family": "火山奇观"
+ },
+ "Kilauea": {
+  "name_cn": "基拉韦厄火山",
+  "lat": 19.4086,
+  "lon": -155.2833,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "世界上最活跃的火山",
+  "family": "火山奇观"
+ },
+ "Matterhorn": {
+  "name_cn": "马特洪峰",
+  "lat": 45.9764,
+  "lon": 7.6586,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "瑞士的尖角雪山",
+  "family": "火山奇观"
+ },
+ "Jungfrau": {
+  "name_cn": "少女峰",
+  "lat": 46.5368,
+  "lon": 7.9626,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "欧洲之巅的少女",
+  "family": "火山奇观"
+ },
+ "Huangshan": {
+  "name_cn": "黄山",
+  "lat": 29.7114,
+  "lon": 118.3125,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "云海与迎客松",
+  "family": "火山奇观"
+ },
+ "Mount Tai": {
+  "name_cn": "泰山",
+  "lat": 36.255,
+  "lon": 117.1008,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "五岳之首的日出",
+  "family": "火山奇观"
+ },
+ "Jade Dragon Snow Mountain": {
+  "name_cn": "玉龙雪山",
+  "lat": 27.0995,
+  "lon": 100.1776,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "丽江的雪顶背景",
+  "family": "火山奇观"
+ },
+ "Zhangjiajie": {
+  "name_cn": "张家界",
+  "lat": 29.1294,
+  "lon": 110.4783,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "阿凡达的悬浮山",
+  "family": "火山奇观"
+ },
+ "Daocheng Yading": {
+  "name_cn": "稻城亚丁",
+  "lat": 28.437,
+  "lon": 100.313,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "最后的香格里拉",
+  "family": "火山奇观"
+ },
+ "Lugu Lake": {
+  "name_cn": "泸沽湖",
+  "lat": 27.708,
+  "lon": 100.8,
+  "surface": "water_fresh",
+  "biome": "mountain",
+  "vibe": "摩梭人的女儿国",
+  "family": "火山奇观"
+ },
+ "Chaka Salt Lake": {
+  "name_cn": "茶卡盐湖",
+  "lat": 36.704,
+  "lon": 99.106,
+  "surface": "bare",
+  "biome": "desert",
+  "vibe": "天空之镜",
+  "family": "火山奇观"
+ },
+ "Qinghai Lake": {
+  "name_cn": "青海湖",
+  "lat": 36.894,
+  "lon": 100.186,
+  "surface": "water_fresh",
+  "biome": "mountain",
+  "vibe": "高原上的海",
+  "family": "火山奇观"
+ },
+ "Niagara Falls": {
+  "name_cn": "尼亚加拉瀑布",
+  "lat": 43.0834,
+  "lon": -79.0663,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "马蹄形的轰鸣",
+  "family": "火山奇观"
+ },
+ "Iguazu Falls": {
+  "name_cn": "伊瓜苏瀑布",
+  "lat": -25.6953,
+  "lon": -54.4367,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "南美的轰鸣水幕",
+  "family": "火山奇观"
+ },
+ "Victoria Falls": {
+  "name_cn": "维多利亚瀑布",
+  "lat": -17.9328,
+  "lon": 25.8307,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "雷霆之雾",
+  "family": "火山奇观"
+ },
+ "Great Barrier Reef": {
+  "name_cn": "大堡礁",
+  "lat": -17.9872,
+  "lon": 146.7698,
+  "surface": "water_ocean",
+  "biome": "island",
+  "vibe": "珊瑚海的活画卷",
+  "family": "火山奇观"
+ },
+ "Blue Lagoon": {
+  "name_cn": "冰岛蓝湖",
+  "lat": 63.8798,
+  "lon": -22.4487,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "火山温泉的牛奶蓝",
+  "family": "火山奇观"
+ },
+ "Hallstatt": {
+  "name_cn": "哈尔施塔特",
+  "lat": 47.5623,
+  "lon": 13.6491,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "湖边木屋与盐矿",
+  "family": "小镇"
+ },
+ "Cinque Terre": {
+  "name_cn": "五渔村",
+  "lat": 44.126,
+  "lon": 9.709,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "悬崖上的彩色渔村",
+  "family": "小镇"
+ },
+ "Colmar": {
+  "name_cn": "科尔马",
+  "lat": 48.0808,
+  "lon": 7.3558,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "木筋房与葡萄酒",
+  "family": "小镇"
+ },
+ "Burano": {
+  "name_cn": "布拉诺岛",
+  "lat": 45.4855,
+  "lon": 12.417,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "彩虹色的房子",
+  "family": "小镇"
+ },
+ "Giethoorn": {
+  "name_cn": "羊角村",
+  "lat": 52.74,
+  "lon": 6.0792,
+  "surface": "water_fresh",
+  "biome": "wetland",
+  "vibe": "没有路只有水的小镇",
+  "family": "小镇"
+ },
+ "Queenstown": {
+  "name_cn": "皇后镇",
+  "lat": -45.0333,
+  "lon": 168.6667,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "瓦卡蒂普湖畔的冒险城",
+  "family": "小镇"
+ },
+ "Interlaken": {
+  "name_cn": "茵特拉肯",
+  "lat": 46.6839,
+  "lon": 7.8664,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "两湖之间的少女峰门户",
+  "family": "小镇"
+ },
+ "Rothenburg": {
+  "name_cn": "罗腾堡",
+  "lat": 49.3771,
+  "lon": 10.1791,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "中世纪的童话城墙",
+  "family": "小镇"
+ },
+ "Cesky Krumlov": {
+  "name_cn": "克鲁姆洛夫",
+  "lat": 48.8127,
+  "lon": 14.3176,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "伏尔塔瓦河的童话小镇",
+  "family": "小镇"
+ },
+ "Mont Saint-Michel": {
+  "name_cn": "圣米歇尔山",
+  "lat": 48.636,
+  "lon": -1.5114,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "潮汐间的修道院",
+  "family": "小镇"
+ },
+ "Amalfi": {
+  "name_cn": "阿马尔菲",
+  "lat": 40.6349,
+  "lon": 14.6024,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "悬崖公路与柠檬",
+  "family": "小镇"
+ },
+ "Positano": {
+  "name_cn": "波西塔诺",
+  "lat": 40.6283,
+  "lon": 14.4843,
+  "surface": "rock",
+  "biome": "coast",
+  "vibe": "垂直生长的彩色小镇",
+  "family": "小镇"
+ },
+ "Lijiang": {
+  "name_cn": "丽江",
+  "lat": 26.8688,
+  "lon": 100.2207,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "雪山脚下的古城",
+  "family": "小镇"
+ },
+ "Dali": {
+  "name_cn": "大理",
+  "lat": 25.5847,
+  "lon": 100.2123,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "苍山洱海风花雪月",
+  "family": "小镇"
+ },
+ "Wuzhen": {
+  "name_cn": "乌镇",
+  "lat": 30.7454,
+  "lon": 120.4851,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "枕水人家",
+  "family": "小镇"
+ },
+ "Pingyao": {
+  "name_cn": "平遥",
+  "lat": 37.201,
+  "lon": 112.177,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "保存最完整的古城墙",
+  "family": "小镇"
+ },
+ "Fenghuang": {
+  "name_cn": "凤凰古城",
+  "lat": 29.2523,
+  "lon": 109.8602,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "沱江边的吊脚楼",
+  "family": "小镇"
+ },
+ "Xitang": {
+  "name_cn": "西塘",
+  "lat": 31.5833,
+  "lon": 119.2889,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "烟雨长廊",
+  "family": "小镇"
+ },
+ "Wuyuan": {
+  "name_cn": "婺源",
+  "lat": 29.2497,
+  "lon": 117.8547,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "油菜花与徽派村落",
+  "family": "小镇"
+ },
+ "Hemu": {
+  "name_cn": "禾木",
+  "lat": 48.573,
+  "lon": 87.434,
+  "surface": "snow",
+  "biome": "mountain",
+  "vibe": "图瓦人的雪乡",
+  "family": "小镇"
+ },
+ "Paris": {
+  "name_cn": "巴黎",
+  "lat": 48.8534,
+  "lon": 2.3486,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "塞纳河与铁塔",
+  "family": "城市"
+ },
+ "Venice": {
+  "name_cn": "威尼斯",
+  "lat": 45.4371,
+  "lon": 12.3326,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "水巷与贡多拉",
+  "family": "城市"
+ },
+ "Prague": {
+  "name_cn": "布拉格",
+  "lat": 50.088,
+  "lon": 14.4208,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "查理大桥的黄昏",
+  "family": "城市"
+ },
+ "Barcelona": {
+  "name_cn": "巴塞罗那",
+  "lat": 41.3888,
+  "lon": 2.159,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "高迪之城与海",
+  "family": "城市"
+ },
+ "Rome": {
+  "name_cn": "罗马",
+  "lat": 41.8919,
+  "lon": 12.5113,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "喷泉、广场与永恒",
+  "family": "城市"
+ },
+ "Florence": {
+  "name_cn": "佛罗伦萨",
+  "lat": 43.7792,
+  "lon": 11.2463,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "文艺复兴的摇篮",
+  "family": "城市"
+ },
+ "Milan": {
+  "name_cn": "米兰",
+  "lat": 45.4643,
+  "lon": 9.1895,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "大教堂与时尚",
+  "family": "城市"
+ },
+ "Vienna": {
+  "name_cn": "维也纳",
+  "lat": 48.2085,
+  "lon": 16.3721,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "金色大厅与咖啡香",
+  "family": "城市"
+ },
+ "Budapest": {
+  "name_cn": "布达佩斯",
+  "lat": 47.5,
+  "lon": 19.0833,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "多瑙河上的双子城",
+  "family": "城市"
+ },
+ "Lisbon": {
+  "name_cn": "里斯本",
+  "lat": 38.7251,
+  "lon": -9.1498,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "电车与法朵",
+  "family": "城市"
+ },
+ "Porto": {
+  "name_cn": "波尔图",
+  "lat": 42.6515,
+  "lon": -7.7126,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "杜罗河与酒窖",
+  "family": "城市"
+ },
+ "Amsterdam": {
+  "name_cn": "阿姆斯特丹",
+  "lat": 50.9449,
+  "lon": 6.9553,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "运河与自行车",
+  "family": "城市"
+ },
+ "Bruges": {
+  "name_cn": "布鲁日",
+  "lat": 51.2093,
+  "lon": 3.2247,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "北方的威尼斯",
+  "family": "城市"
+ },
+ "Edinburgh": {
+  "name_cn": "爱丁堡",
+  "lat": 55.9521,
+  "lon": -3.1965,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "城堡与风笛",
+  "family": "城市"
+ },
+ "London": {
+  "name_cn": "伦敦",
+  "lat": 51.5085,
+  "lon": -0.1257,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "泰晤士河与红巴士",
+  "family": "城市"
+ },
+ "Copenhagen": {
+  "name_cn": "哥本哈根",
+  "lat": 55.6759,
+  "lon": 12.5655,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "美人鱼与自行车道",
+  "family": "城市"
+ },
+ "Stockholm": {
+  "name_cn": "斯德哥尔摩",
+  "lat": 60.1572,
+  "lon": 20.5217,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "群岛之间的北欧之光",
+  "family": "城市"
+ },
+ "Reykjavik": {
+  "name_cn": "雷克雅未克",
+  "lat": 64.1466,
+  "lon": -21.9426,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "极光与地热",
+  "family": "城市"
+ },
+ "Istanbul": {
+  "name_cn": "伊斯坦布尔",
+  "lat": 41.0138,
+  "lon": 28.9497,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "两洲之间的香料城",
+  "family": "城市"
+ },
+ "Dubai": {
+  "name_cn": "迪拜",
+  "lat": 25.0772,
+  "lon": 55.3093,
+  "surface": "urban",
+  "biome": "desert",
+  "vibe": "沙漠里的未来城",
+  "family": "城市"
+ },
+ "Kyoto": {
+  "name_cn": "京都",
+  "lat": 35.0211,
+  "lon": 135.7538,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "古都与红叶",
+  "family": "城市"
+ },
+ "Nara": {
+  "name_cn": "奈良",
+  "lat": 34.6851,
+  "lon": 135.8048,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "鹿与古寺",
+  "family": "城市"
+ },
+ "Tokyo": {
+  "name_cn": "东京",
+  "lat": 35.6895,
+  "lon": 139.6917,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "霓虹与樱花",
+  "family": "城市"
+ },
+ "Seoul": {
+  "name_cn": "首尔",
+  "lat": 37.5833,
+  "lon": 127.0,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "汉江与宫墙",
+  "family": "城市"
+ },
+ "Chiang Mai": {
+  "name_cn": "清迈",
+  "lat": 18.7904,
+  "lon": 98.9847,
+  "surface": "urban",
+  "biome": "mountain",
+  "vibe": "古城与山间",
+  "family": "城市"
+ },
+ "Bangkok": {
+  "name_cn": "曼谷",
+  "lat": 13.8772,
+  "lon": 100.7199,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "湄南河与夜市",
+  "family": "城市"
+ },
+ "Singapore": {
+  "name_cn": "新加坡",
+  "lat": 1.2897,
+  "lon": 103.8501,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "花园城市",
+  "family": "城市"
+ },
+ "Hong Kong": {
+  "name_cn": "香港",
+  "lat": 22.2783,
+  "lon": 114.1747,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "维港灯火",
+  "family": "城市"
+ },
+ "Taipei": {
+  "name_cn": "台北",
+  "lat": 25.0531,
+  "lon": 121.5264,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "夜市与101",
+  "family": "城市"
+ },
+ "Shanghai": {
+  "name_cn": "上海",
+  "lat": 31.2222,
+  "lon": 121.4581,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "外滩与梧桐",
+  "family": "城市"
+ },
+ "Hangzhou": {
+  "name_cn": "杭州",
+  "lat": 30.2936,
+  "lon": 120.1614,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "西湖与断桥",
+  "family": "城市"
+ },
+ "Suzhou": {
+  "name_cn": "苏州",
+  "lat": 31.3041,
+  "lon": 120.5954,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "园林与评弹",
+  "family": "城市"
+ },
+ "Nanjing": {
+  "name_cn": "南京",
+  "lat": 32.0617,
+  "lon": 118.7778,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "梧桐与秦淮",
+  "family": "城市"
+ },
+ "Chengdu": {
+  "name_cn": "成都",
+  "lat": 30.6667,
+  "lon": 104.0667,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "熊猫与火锅",
+  "family": "城市"
+ },
+ "Chongqing": {
+  "name_cn": "重庆",
+  "lat": 29.5603,
+  "lon": 106.5577,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "8D魔幻山城",
+  "family": "城市"
+ },
+ "Xiamen": {
+  "name_cn": "厦门",
+  "lat": 24.4798,
+  "lon": 118.0819,
+  "surface": "urban",
+  "biome": "coast",
+  "vibe": "鼓浪屿与三角梅",
+  "family": "城市"
+ },
+ "Beijing": {
+  "name_cn": "北京",
+  "lat": 39.9075,
+  "lon": 116.3972,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shenzhen": {
+  "name_cn": "深圳",
+  "lat": 22.5455,
+  "lon": 114.0683,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Guangzhou": {
+  "name_cn": "广州",
+  "lat": 23.1167,
+  "lon": 113.25,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kinshasa": {
+  "name_cn": "金沙萨",
+  "lat": -4.3276,
+  "lon": 15.3136,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lagos": {
+  "name_cn": "拉各斯",
+  "lat": 6.4541,
+  "lon": 3.3947,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ho Chi Minh City": {
+  "name_cn": "胡志明市",
+  "lat": 10.823,
+  "lon": 106.6296,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lahore": {
+  "name_cn": "拉合尔",
+  "lat": 31.558,
+  "lon": 74.3507,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Mumbai": {
+  "name_cn": "孟买",
+  "lat": 19.0728,
+  "lon": 72.8826,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "São Paulo": {
+  "name_cn": "",
+  "lat": -23.5475,
+  "lon": -46.6361,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Mexico City": {
+  "name_cn": "墨西哥城",
+  "lat": 19.4285,
+  "lon": -99.1277,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Karachi": {
+  "name_cn": "卡拉奇",
+  "lat": 24.8608,
+  "lon": 67.0104,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tianjin": {
+  "name_cn": "天津",
+  "lat": 39.1422,
+  "lon": 117.1767,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Delhi": {
+  "name_cn": "德里",
+  "lat": 28.6519,
+  "lon": 77.2315,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Wuhan": {
+  "name_cn": "武汉",
+  "lat": 30.5833,
+  "lon": 114.2667,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Moscow": {
+  "name_cn": "莫斯科",
+  "lat": 55.752,
+  "lon": 37.6178,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Dhaka": {
+  "name_cn": "达卡",
+  "lat": 23.7104,
+  "lon": 90.4074,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Dongguan": {
+  "name_cn": "",
+  "lat": 23.018,
+  "lon": 113.7487,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Cairo": {
+  "name_cn": "开罗",
+  "lat": 30.0626,
+  "lon": 31.2497,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Xi’an": {
+  "name_cn": "",
+  "lat": 34.2583,
+  "lon": 108.9286,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Johannesburg": {
+  "name_cn": "",
+  "lat": -26.2023,
+  "lon": 28.0436,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Foshan": {
+  "name_cn": "",
+  "lat": 23.0268,
+  "lon": 113.1315,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "New York City": {
+  "name_cn": "",
+  "lat": 40.7143,
+  "lon": -74.006,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jakarta": {
+  "name_cn": "雅加达",
+  "lat": -6.2146,
+  "lon": 106.8451,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bengaluru": {
+  "name_cn": "",
+  "lat": 12.9719,
+  "lon": 77.5937,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Hanoi": {
+  "name_cn": "河内",
+  "lat": 21.0245,
+  "lon": 105.8412,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lima": {
+  "name_cn": "利马",
+  "lat": -12.0432,
+  "lon": -77.0282,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bogotá": {
+  "name_cn": "",
+  "lat": 4.6097,
+  "lon": -74.0817,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Baghdad": {
+  "name_cn": "",
+  "lat": 33.3406,
+  "lon": 44.4009,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Wuzhong": {
+  "name_cn": "",
+  "lat": 37.9867,
+  "lon": 106.201,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Qingdao": {
+  "name_cn": "青岛",
+  "lat": 36.0649,
+  "lon": 120.3804,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tehran": {
+  "name_cn": "",
+  "lat": 35.6944,
+  "lon": 51.4215,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shenyang": {
+  "name_cn": "",
+  "lat": 41.7922,
+  "lon": 123.4328,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Hyderabad": {
+  "name_cn": "",
+  "lat": 17.384,
+  "lon": 78.4564,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Rio de Janeiro": {
+  "name_cn": "里约热内卢",
+  "lat": -22.9064,
+  "lon": -43.1822,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Puxi": {
+  "name_cn": "",
+  "lat": 31.2441,
+  "lon": 121.4659,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ahmedabad": {
+  "name_cn": "",
+  "lat": 23.0258,
+  "lon": 72.5873,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Abidjan": {
+  "name_cn": "",
+  "lat": 5.3544,
+  "lon": -4.0017,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Pudong": {
+  "name_cn": "",
+  "lat": 31.24,
+  "lon": 121.5009,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Sydney": {
+  "name_cn": "悉尼",
+  "lat": -33.8678,
+  "lon": 151.2073,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Melbourne": {
+  "name_cn": "墨尔本",
+  "lat": -37.814,
+  "lon": 144.9633,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Dar es Salaam": {
+  "name_cn": "",
+  "lat": -6.8235,
+  "lon": 39.2695,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Saint Petersburg": {
+  "name_cn": "",
+  "lat": 59.9386,
+  "lon": 30.3141,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Alexandria": {
+  "name_cn": "",
+  "lat": 31.2018,
+  "lon": 29.9158,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Harbin": {
+  "name_cn": "哈尔滨",
+  "lat": 45.75,
+  "lon": 126.65,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Hefei": {
+  "name_cn": "合肥",
+  "lat": 31.8639,
+  "lon": 117.2808,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Dalian": {
+  "name_cn": "大连",
+  "lat": 38.9122,
+  "lon": 121.6022,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kano": {
+  "name_cn": "",
+  "lat": 12.0001,
+  "lon": 8.5167,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Santiago": {
+  "name_cn": "圣地亚哥",
+  "lat": -33.4569,
+  "lon": -70.6483,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Cape Town": {
+  "name_cn": "开普敦",
+  "lat": -33.9258,
+  "lon": 18.4232,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Peshawar": {
+  "name_cn": "",
+  "lat": 34.008,
+  "lon": 71.5785,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Changchun": {
+  "name_cn": "",
+  "lat": 43.88,
+  "lon": 125.3228,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jeddah": {
+  "name_cn": "",
+  "lat": 21.4901,
+  "lon": 39.1862,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Chennai": {
+  "name_cn": "",
+  "lat": 13.0878,
+  "lon": 80.2785,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kolkata": {
+  "name_cn": "",
+  "lat": 22.5626,
+  "lon": 88.363,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Surat": {
+  "name_cn": "",
+  "lat": 21.1959,
+  "lon": 72.8302,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Yangon": {
+  "name_cn": "仰光",
+  "lat": 16.8053,
+  "lon": 96.1561,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bao'an": {
+  "name_cn": "",
+  "lat": 22.5521,
+  "lon": 113.8829,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kabul": {
+  "name_cn": "",
+  "lat": 34.5281,
+  "lon": 69.1723,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nairobi": {
+  "name_cn": "内罗毕",
+  "lat": -1.2833,
+  "lon": 36.8167,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Wuxi": {
+  "name_cn": "",
+  "lat": 31.5689,
+  "lon": 120.2886,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Giza": {
+  "name_cn": "",
+  "lat": 30.0094,
+  "lon": 31.2086,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jinan": {
+  "name_cn": "济南",
+  "lat": 36.6683,
+  "lon": 116.9972,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Taiyuan": {
+  "name_cn": "",
+  "lat": 37.8694,
+  "lon": 112.5603,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Zhengzhou": {
+  "name_cn": "郑州",
+  "lat": 34.7578,
+  "lon": 113.6486,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bamako": {
+  "name_cn": "",
+  "lat": 12.6091,
+  "lon": -7.9752,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Riyadh": {
+  "name_cn": "",
+  "lat": 24.6877,
+  "lon": 46.7219,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "New Taipei City": {
+  "name_cn": "",
+  "lat": 25.062,
+  "lon": 121.457,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "New Territories": {
+  "name_cn": "",
+  "lat": 22.4244,
+  "lon": 114.111,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shijiazhuang": {
+  "name_cn": "",
+  "lat": 38.0414,
+  "lon": 114.4786,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Chattogram": {
+  "name_cn": "",
+  "lat": 22.3384,
+  "lon": 91.8317,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Addis Ababa": {
+  "name_cn": "",
+  "lat": 9.025,
+  "lon": 38.7469,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kunming": {
+  "name_cn": "昆明",
+  "lat": 25.0389,
+  "lon": 102.7183,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Zhongshan": {
+  "name_cn": "",
+  "lat": 22.5231,
+  "lon": 113.3791,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nanning": {
+  "name_cn": "",
+  "lat": 22.8167,
+  "lon": 108.3167,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shantou": {
+  "name_cn": "",
+  "lat": 23.3549,
+  "lon": 116.6788,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Los Angeles": {
+  "name_cn": "洛杉矶",
+  "lat": 34.0522,
+  "lon": -118.2437,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Faisalabad": {
+  "name_cn": "",
+  "lat": 31.4155,
+  "lon": 73.0897,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Yokohama": {
+  "name_cn": "",
+  "lat": 35.4333,
+  "lon": 139.65,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Fuzhou": {
+  "name_cn": "福州",
+  "lat": 26.0614,
+  "lon": 119.3061,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ningbo": {
+  "name_cn": "宁波",
+  "lat": 29.8782,
+  "lon": 121.5494,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Casablanca": {
+  "name_cn": "卡萨布兰卡",
+  "lat": 33.5883,
+  "lon": -7.6114,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ibadan": {
+  "name_cn": "",
+  "lat": 7.3776,
+  "lon": 3.9059,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Puyang": {
+  "name_cn": "",
+  "lat": 29.4568,
+  "lon": 119.8887,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ankara": {
+  "name_cn": "",
+  "lat": 39.9199,
+  "lon": 32.8543,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shiyan": {
+  "name_cn": "",
+  "lat": 32.6475,
+  "lon": 110.7781,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Berlin": {
+  "name_cn": "柏林",
+  "lat": 52.5244,
+  "lon": 13.4105,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tangshan": {
+  "name_cn": "",
+  "lat": 39.6438,
+  "lon": 118.1832,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Rawalpindi": {
+  "name_cn": "",
+  "lat": 33.5973,
+  "lon": 73.0479,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lüliang": {
+  "name_cn": "",
+  "lat": 37.5192,
+  "lon": 111.1444,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Durban": {
+  "name_cn": "",
+  "lat": -29.8579,
+  "lon": 31.0292,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Changzhou": {
+  "name_cn": "",
+  "lat": 31.7736,
+  "lon": 119.954,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Busan": {
+  "name_cn": "釜山",
+  "lat": 35.1017,
+  "lon": 129.03,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Madrid": {
+  "name_cn": "马德里",
+  "lat": 40.4165,
+  "lon": -3.7026,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Pyongyang": {
+  "name_cn": "",
+  "lat": 39.0339,
+  "lon": 125.7543,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Zibo": {
+  "name_cn": "",
+  "lat": 36.7906,
+  "lon": 118.0633,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Pune": {
+  "name_cn": "",
+  "lat": 18.5196,
+  "lon": 73.8554,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bursa": {
+  "name_cn": "",
+  "lat": 40.1956,
+  "lon": 29.0601,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Changsha": {
+  "name_cn": "长沙",
+  "lat": 28.1987,
+  "lon": 112.9709,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Quezon City": {
+  "name_cn": "",
+  "lat": 14.6488,
+  "lon": 121.0509,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jaipur": {
+  "name_cn": "",
+  "lat": 26.9196,
+  "lon": 75.7878,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Guiyang": {
+  "name_cn": "贵阳",
+  "lat": 26.5833,
+  "lon": 106.7167,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ürümqi": {
+  "name_cn": "",
+  "lat": 43.801,
+  "lon": 87.6005,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Surabaya": {
+  "name_cn": "",
+  "lat": -7.2492,
+  "lon": 112.7508,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Incheon": {
+  "name_cn": "",
+  "lat": 37.4565,
+  "lon": 126.7052,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lanzhou": {
+  "name_cn": "",
+  "lat": 36.057,
+  "lon": 103.8399,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Caracas": {
+  "name_cn": "",
+  "lat": 10.488,
+  "lon": -66.8792,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kyiv": {
+  "name_cn": "",
+  "lat": 50.4547,
+  "lon": 30.5238,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "İzmir": {
+  "name_cn": "",
+  "lat": 38.4127,
+  "lon": 27.1384,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Huizhou": {
+  "name_cn": "",
+  "lat": 23.1115,
+  "lon": 114.4152,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Buenos Aires": {
+  "name_cn": "布宜诺斯艾利斯",
+  "lat": -34.6131,
+  "lon": -58.3772,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Haikou": {
+  "name_cn": "海口",
+  "lat": 20.0342,
+  "lon": 110.3465,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Taichung": {
+  "name_cn": "",
+  "lat": 24.1469,
+  "lon": 120.6839,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kanpur": {
+  "name_cn": "",
+  "lat": 26.4652,
+  "lon": 80.3498,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Toronto": {
+  "name_cn": "多伦多",
+  "lat": 43.7064,
+  "lon": -79.3986,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Quito": {
+  "name_cn": "基多",
+  "lat": -0.2298,
+  "lon": -78.525,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Brisbane": {
+  "name_cn": "布里斯班",
+  "lat": -27.4679,
+  "lon": 153.0281,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Luanda": {
+  "name_cn": "",
+  "lat": -8.8368,
+  "lon": 13.2343,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Osaka": {
+  "name_cn": "大阪",
+  "lat": 34.6938,
+  "lon": 135.5011,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Linyi": {
+  "name_cn": "",
+  "lat": 35.0631,
+  "lon": 118.3428,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Baoding": {
+  "name_cn": "",
+  "lat": 38.8729,
+  "lon": 115.4625,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kaohsiung": {
+  "name_cn": "",
+  "lat": 22.6163,
+  "lon": 120.3133,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Brooklyn": {
+  "name_cn": "",
+  "lat": 40.6501,
+  "lon": -73.9496,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Guayaquil": {
+  "name_cn": "",
+  "lat": -2.1962,
+  "lon": -79.8862,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Belo Horizonte": {
+  "name_cn": "",
+  "lat": -19.9208,
+  "lon": -43.9378,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Minhang": {
+  "name_cn": "",
+  "lat": 31.1088,
+  "lon": 121.3747,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bazhong": {
+  "name_cn": "",
+  "lat": 31.8694,
+  "lon": 106.7443,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Salvador": {
+  "name_cn": "",
+  "lat": -12.9756,
+  "lon": -38.491,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Abuja": {
+  "name_cn": "",
+  "lat": 9.0579,
+  "lon": 7.4951,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Gazipur": {
+  "name_cn": "",
+  "lat": 23.9984,
+  "lon": 90.4223,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Chicago": {
+  "name_cn": "芝加哥",
+  "lat": 41.85,
+  "lon": -87.65,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Wenzhou": {
+  "name_cn": "",
+  "lat": 27.9994,
+  "lon": 120.6668,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bekasi": {
+  "name_cn": "",
+  "lat": -6.2349,
+  "lon": 106.9896,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Dakar": {
+  "name_cn": "",
+  "lat": 14.6937,
+  "lon": -17.4441,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Haiphong": {
+  "name_cn": "",
+  "lat": 20.8648,
+  "lon": 106.6834,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Yunfu": {
+  "name_cn": "",
+  "lat": 22.9279,
+  "lon": 112.0381,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Navi Mumbai": {
+  "name_cn": "",
+  "lat": 19.0368,
+  "lon": 73.0158,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Mogadishu": {
+  "name_cn": "",
+  "lat": 2.0371,
+  "lon": 45.3438,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kumasi": {
+  "name_cn": "",
+  "lat": 6.6885,
+  "lon": -1.6244,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bandung": {
+  "name_cn": "",
+  "lat": -6.9222,
+  "lon": 107.6069,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Gujranwala": {
+  "name_cn": "",
+  "lat": 32.1557,
+  "lon": 74.187,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Huai'an": {
+  "name_cn": "",
+  "lat": 33.5886,
+  "lon": 119.0192,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Medan": {
+  "name_cn": "",
+  "lat": 3.5833,
+  "lon": 98.6667,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lucknow": {
+  "name_cn": "",
+  "lat": 26.8393,
+  "lon": 80.9231,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ouagadougou": {
+  "name_cn": "",
+  "lat": 12.3657,
+  "lon": -1.5339,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nagpur": {
+  "name_cn": "",
+  "lat": 21.1463,
+  "lon": 79.0849,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Fortaleza": {
+  "name_cn": "",
+  "lat": -3.7172,
+  "lon": -38.5431,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Cali": {
+  "name_cn": "",
+  "lat": 3.4305,
+  "lon": -76.5199,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Perth": {
+  "name_cn": "",
+  "lat": -31.9522,
+  "lon": 115.8614,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Daegu": {
+  "name_cn": "",
+  "lat": 35.8703,
+  "lon": 128.5911,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Algiers": {
+  "name_cn": "",
+  "lat": 36.7323,
+  "lon": 3.0875,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nanchang": {
+  "name_cn": "南昌",
+  "lat": 28.684,
+  "lon": 115.8531,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Baku": {
+  "name_cn": "",
+  "lat": 40.3777,
+  "lon": 49.892,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Hohhot": {
+  "name_cn": "",
+  "lat": 40.8106,
+  "lon": 111.6522,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nagoya": {
+  "name_cn": "名古屋",
+  "lat": 35.1815,
+  "lon": 136.9064,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Queens": {
+  "name_cn": "",
+  "lat": 40.6815,
+  "lon": -73.8365,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Houston": {
+  "name_cn": "休斯敦",
+  "lat": 29.7633,
+  "lon": -95.3633,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Mashhad": {
+  "name_cn": "",
+  "lat": 36.2981,
+  "lon": 59.6057,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shaoxing": {
+  "name_cn": "",
+  "lat": 30.0024,
+  "lon": 120.5786,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nantong": {
+  "name_cn": "",
+  "lat": 32.0303,
+  "lon": 120.8747,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Baoshan": {
+  "name_cn": "",
+  "lat": 31.4084,
+  "lon": 121.4896,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kowloon": {
+  "name_cn": "",
+  "lat": 22.3167,
+  "lon": 114.1833,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Yantai": {
+  "name_cn": "",
+  "lat": 37.4765,
+  "lon": 121.4408,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Gaziantep": {
+  "name_cn": "",
+  "lat": 37.0594,
+  "lon": 37.3825,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lubumbashi": {
+  "name_cn": "",
+  "lat": -11.6609,
+  "lon": 27.4794,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Manaus": {
+  "name_cn": "",
+  "lat": -3.1019,
+  "lon": -60.025,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lusaka": {
+  "name_cn": "",
+  "lat": -15.4067,
+  "lon": 28.2871,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Brasília": {
+  "name_cn": "",
+  "lat": -15.7797,
+  "lon": -47.9297,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Zhuhai": {
+  "name_cn": "珠海",
+  "lat": 22.2769,
+  "lon": 113.5678,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Santo Domingo": {
+  "name_cn": "",
+  "lat": 18.4719,
+  "lon": -69.8923,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lomé": {
+  "name_cn": "",
+  "lat": 6.1287,
+  "lon": 1.2215,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Multan": {
+  "name_cn": "",
+  "lat": 30.1968,
+  "lon": 71.4782,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Havana": {
+  "name_cn": "哈瓦那",
+  "lat": 23.133,
+  "lon": -82.383,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Depok": {
+  "name_cn": "",
+  "lat": -6.4,
+  "lon": 106.8186,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Baotou": {
+  "name_cn": "",
+  "lat": 40.6516,
+  "lon": 109.8439,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Coimbatore": {
+  "name_cn": "",
+  "lat": 11.0055,
+  "lon": 76.9661,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Qingyang": {
+  "name_cn": "",
+  "lat": 35.7098,
+  "lon": 107.6445,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Port Harcourt": {
+  "name_cn": "",
+  "lat": 4.7774,
+  "lon": 7.0134,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Pretoria": {
+  "name_cn": "",
+  "lat": -25.7449,
+  "lon": 28.1878,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Córdoba": {
+  "name_cn": "",
+  "lat": -31.4065,
+  "lon": -64.1885,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Mbuji-Mayi": {
+  "name_cn": "",
+  "lat": -6.136,
+  "lon": 23.5898,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Aleppo": {
+  "name_cn": "",
+  "lat": 36.2012,
+  "lon": 37.1612,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kunshan": {
+  "name_cn": "",
+  "lat": 31.3776,
+  "lon": 120.9543,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Al Mawşil al Jadīdah": {
+  "name_cn": "",
+  "lat": 36.3327,
+  "lon": 43.1056,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Weifang": {
+  "name_cn": "",
+  "lat": 36.71,
+  "lon": 119.1019,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Zunyi": {
+  "name_cn": "",
+  "lat": 27.6867,
+  "lon": 106.9072,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "La Paz": {
+  "name_cn": "",
+  "lat": -16.5,
+  "lon": -68.15,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lianyungang": {
+  "name_cn": "",
+  "lat": 34.5984,
+  "lon": 119.2156,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Medellín": {
+  "name_cn": "",
+  "lat": 6.245,
+  "lon": -75.5715,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Indore": {
+  "name_cn": "",
+  "lat": 22.7179,
+  "lon": 75.8333,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Brazzaville": {
+  "name_cn": "",
+  "lat": -4.2661,
+  "lon": 15.2832,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tashkent": {
+  "name_cn": "",
+  "lat": 41.2647,
+  "lon": 69.2163,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ganzhou": {
+  "name_cn": "",
+  "lat": 25.8466,
+  "lon": 114.9326,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Almaty": {
+  "name_cn": "",
+  "lat": 43.2525,
+  "lon": 76.9115,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Khartoum": {
+  "name_cn": "",
+  "lat": 15.5518,
+  "lon": 32.5324,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Hamburg": {
+  "name_cn": "",
+  "lat": 53.5507,
+  "lon": 9.993,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Sapporo": {
+  "name_cn": "札幌",
+  "lat": 43.0667,
+  "lon": 141.35,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Songjiang": {
+  "name_cn": "",
+  "lat": 31.0344,
+  "lon": 121.2233,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Accra": {
+  "name_cn": "",
+  "lat": 5.556,
+  "lon": -0.1969,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Curitiba": {
+  "name_cn": "",
+  "lat": -25.4278,
+  "lon": -49.2731,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ordos": {
+  "name_cn": "",
+  "lat": 39.6086,
+  "lon": 109.7816,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Sanaa": {
+  "name_cn": "",
+  "lat": 15.3545,
+  "lon": 44.2065,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Conakry": {
+  "name_cn": "",
+  "lat": 9.538,
+  "lon": -13.6773,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tangerang": {
+  "name_cn": "",
+  "lat": -6.1781,
+  "lon": 106.63,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tijuana": {
+  "name_cn": "",
+  "lat": 32.5027,
+  "lon": -117.0037,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Beirut": {
+  "name_cn": "",
+  "lat": 33.8933,
+  "lon": 35.5016,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jieyang": {
+  "name_cn": "",
+  "lat": 23.5418,
+  "lon": 116.3658,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jilin": {
+  "name_cn": "",
+  "lat": 43.8465,
+  "lon": 126.5608,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jiading": {
+  "name_cn": "",
+  "lat": 31.3858,
+  "lon": 121.2446,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bucharest": {
+  "name_cn": "",
+  "lat": 44.4323,
+  "lon": 26.1063,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Camayenne": {
+  "name_cn": "",
+  "lat": 9.535,
+  "lon": -13.6878,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kakamega": {
+  "name_cn": "",
+  "lat": 0.2842,
+  "lon": 34.7523,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Shangqiu": {
+  "name_cn": "",
+  "lat": 34.4143,
+  "lon": 115.6561,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nanchong": {
+  "name_cn": "",
+  "lat": 30.7951,
+  "lon": 106.0847,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tainan": {
+  "name_cn": "",
+  "lat": 22.9908,
+  "lon": 120.2133,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kaduna": {
+  "name_cn": "",
+  "lat": 10.5264,
+  "lon": 7.4388,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Datong": {
+  "name_cn": "",
+  "lat": 40.0936,
+  "lon": 113.2914,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Omdurman": {
+  "name_cn": "",
+  "lat": 15.6445,
+  "lon": 32.4777,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Davao": {
+  "name_cn": "",
+  "lat": 7.0731,
+  "lon": 125.6128,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Thāne": {
+  "name_cn": "",
+  "lat": 19.197,
+  "lon": 72.9635,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Iztapalapa": {
+  "name_cn": "",
+  "lat": 19.3553,
+  "lon": -99.0622,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Diyarbakır": {
+  "name_cn": "",
+  "lat": 37.9136,
+  "lon": 40.2172,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Santa Cruz de la Sierra": {
+  "name_cn": "",
+  "lat": -17.7863,
+  "lon": -63.1812,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Vadodara": {
+  "name_cn": "",
+  "lat": 22.2994,
+  "lon": 73.2081,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Adana": {
+  "name_cn": "",
+  "lat": 36.9862,
+  "lon": 35.3253,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Nanyang": {
+  "name_cn": "",
+  "lat": 33.0052,
+  "lon": 112.5466,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Abu Dhabi": {
+  "name_cn": "阿布扎比",
+  "lat": 24.4512,
+  "lon": 54.397,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Palembang": {
+  "name_cn": "",
+  "lat": -2.9167,
+  "lon": 104.7458,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Sharjah": {
+  "name_cn": "",
+  "lat": 25.3342,
+  "lon": 55.4122,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bhopal": {
+  "name_cn": "",
+  "lat": 23.2547,
+  "lon": 77.4029,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jiangmen": {
+  "name_cn": "",
+  "lat": 22.5833,
+  "lon": 113.0833,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Benin City": {
+  "name_cn": "",
+  "lat": 6.3381,
+  "lon": 5.6258,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Jiangyin": {
+  "name_cn": "",
+  "lat": 31.911,
+  "lon": 120.263,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Fuyang": {
+  "name_cn": "",
+  "lat": 32.9,
+  "lon": 115.8167,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Montréal": {
+  "name_cn": "",
+  "lat": 45.5088,
+  "lon": -73.5878,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Bayan Nur": {
+  "name_cn": "",
+  "lat": 40.7414,
+  "lon": 107.386,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Maracaibo": {
+  "name_cn": "",
+  "lat": 10.6423,
+  "lon": -71.6109,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Chaozhou": {
+  "name_cn": "",
+  "lat": 23.654,
+  "lon": 116.6226,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Minsk": {
+  "name_cn": "",
+  "lat": 53.9002,
+  "lon": 27.5665,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Qingyuan": {
+  "name_cn": "",
+  "lat": 23.7,
+  "lon": 113.0333,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Tai’an": {
+  "name_cn": "",
+  "lat": 36.1853,
+  "lon": 117.12,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Rasapūdipalem": {
+  "name_cn": "",
+  "lat": 17.7331,
+  "lon": 83.3162,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Pimpri-Chinchwad": {
+  "name_cn": "",
+  "lat": 18.6187,
+  "lon": 73.8037,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Caloocan": {
+  "name_cn": "",
+  "lat": 14.6495,
+  "lon": 120.9679,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Warsaw": {
+  "name_cn": "华沙",
+  "lat": 52.2298,
+  "lon": 21.0118,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Soweto": {
+  "name_cn": "",
+  "lat": -26.2678,
+  "lon": 27.8585,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Semarang": {
+  "name_cn": "",
+  "lat": -6.9931,
+  "lon": 110.4208,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Puebla": {
+  "name_cn": "",
+  "lat": 19.0478,
+  "lon": -98.2072,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Patna": {
+  "name_cn": "",
+  "lat": 25.5941,
+  "lon": 85.1356,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Mosul": {
+  "name_cn": "",
+  "lat": 36.335,
+  "lon": 43.1189,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kallakurichi": {
+  "name_cn": "",
+  "lat": 11.7338,
+  "lon": 78.9592,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Kampala": {
+  "name_cn": "",
+  "lat": 0.3163,
+  "lon": 32.5822,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Xining": {
+  "name_cn": "",
+  "lat": 36.6255,
+  "lon": 101.7574,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Changshu": {
+  "name_cn": "",
+  "lat": 31.6461,
+  "lon": 120.7422,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Huainan": {
+  "name_cn": "",
+  "lat": 32.6264,
+  "lon": 116.9969,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Rabat": {
+  "name_cn": "",
+  "lat": 34.0132,
+  "lon": -6.8326,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Recife": {
+  "name_cn": "",
+  "lat": -8.0539,
+  "lon": -34.8811,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Phoenix": {
+  "name_cn": "",
+  "lat": 33.4484,
+  "lon": -112.074,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Ecatepec de Morelos": {
+  "name_cn": "",
+  "lat": 19.6049,
+  "lon": -99.0606,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Lu’an": {
+  "name_cn": "",
+  "lat": 31.7356,
+  "lon": 116.5169,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Valencia": {
+  "name_cn": "",
+  "lat": 10.1615,
+  "lon": -68.0004,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "都会灯火与人间烟火",
+  "family": "城市"
+ },
+ "Aruba": {
+  "name_cn": "阿鲁巴",
+  "lat": 12.52,
+  "lon": -69.97,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Barbados": {
+  "name_cn": "巴巴多斯",
+  "lat": 13.19,
+  "lon": -59.54,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Bahamas": {
+  "name_cn": "巴哈马",
+  "lat": 25.03,
+  "lon": -77.4,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Jamaica": {
+  "name_cn": "牙买加",
+  "lat": 18.11,
+  "lon": -77.3,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Puerto Rico": {
+  "name_cn": "波多黎各",
+  "lat": 18.22,
+  "lon": -66.59,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Curacao": {
+  "name_cn": "库拉索",
+  "lat": 12.17,
+  "lon": -68.99,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Saint Lucia": {
+  "name_cn": "圣卢西亚",
+  "lat": 13.91,
+  "lon": -60.98,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Antigua": {
+  "name_cn": "安提瓜",
+  "lat": 17.06,
+  "lon": -61.8,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Grenada": {
+  "name_cn": "格林纳达",
+  "lat": 12.12,
+  "lon": -61.68,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Cayman Islands": {
+  "name_cn": "开曼群岛",
+  "lat": 19.31,
+  "lon": -81.25,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Bermuda": {
+  "name_cn": "百慕大",
+  "lat": 32.31,
+  "lon": -64.75,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Cozumel": {
+  "name_cn": "科苏梅尔",
+  "lat": 20.42,
+  "lon": -86.92,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Capri": {
+  "name_cn": "卡普里岛",
+  "lat": 40.55,
+  "lon": 14.24,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Elba": {
+  "name_cn": "厄尔巴岛",
+  "lat": 42.78,
+  "lon": 10.28,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Ischia": {
+  "name_cn": "伊斯基亚",
+  "lat": 40.73,
+  "lon": 13.94,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Zakynthos": {
+  "name_cn": "扎金索斯",
+  "lat": 37.79,
+  "lon": 20.9,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Lefkada": {
+  "name_cn": "莱夫卡达",
+  "lat": 38.72,
+  "lon": 20.64,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Paros": {
+  "name_cn": "帕罗斯岛",
+  "lat": 37.08,
+  "lon": 25.15,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Naxos": {
+  "name_cn": "纳克索斯",
+  "lat": 37.1,
+  "lon": 25.38,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Kos": {
+  "name_cn": "科斯岛",
+  "lat": 36.89,
+  "lon": 27.29,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Hvar": {
+  "name_cn": "赫瓦尔岛",
+  "lat": 43.17,
+  "lon": 16.44,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Brac": {
+  "name_cn": "布拉奇岛",
+  "lat": 43.32,
+  "lon": 16.65,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Korcula": {
+  "name_cn": "科尔丘拉",
+  "lat": 42.96,
+  "lon": 17.14,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Cyprus": {
+  "name_cn": "塞浦路斯",
+  "lat": 35.13,
+  "lon": 33.43,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Madeira": {
+  "name_cn": "马德拉",
+  "lat": 32.76,
+  "lon": -16.96,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Azores": {
+  "name_cn": "亚速尔群岛",
+  "lat": 37.74,
+  "lon": -25.67,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Tenerife": {
+  "name_cn": "特内里费",
+  "lat": 28.29,
+  "lon": -16.63,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Lanzarote": {
+  "name_cn": "兰萨罗特",
+  "lat": 29.05,
+  "lon": -13.63,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Gran Canaria": {
+  "name_cn": "大加那利",
+  "lat": 27.92,
+  "lon": -15.55,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Formentera": {
+  "name_cn": "福门特拉",
+  "lat": 38.7,
+  "lon": 1.45,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Menorca": {
+  "name_cn": "梅诺卡",
+  "lat": 39.95,
+  "lon": 4.05,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Palawan": {
+  "name_cn": "巴拉望",
+  "lat": 10.02,
+  "lon": 118.8,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Boracay": {
+  "name_cn": "长滩岛",
+  "lat": 11.97,
+  "lon": 121.92,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Cebu": {
+  "name_cn": "宿务",
+  "lat": 10.32,
+  "lon": 123.75,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Siargao": {
+  "name_cn": "锡亚高",
+  "lat": 9.85,
+  "lon": 126.05,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Koh Phi Phi": {
+  "name_cn": "皮皮岛",
+  "lat": 7.74,
+  "lon": 98.78,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Koh Phangan": {
+  "name_cn": "帕岸岛",
+  "lat": 9.73,
+  "lon": 100.01,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Koh Tao": {
+  "name_cn": "涛岛",
+  "lat": 10.09,
+  "lon": 99.84,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Koh Lipe": {
+  "name_cn": "丽贝岛",
+  "lat": 6.49,
+  "lon": 99.3,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Nusa Penida": {
+  "name_cn": "佩尼达岛",
+  "lat": -8.73,
+  "lon": 115.54,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Gili Islands": {
+  "name_cn": "吉利群岛",
+  "lat": -8.35,
+  "lon": 116.06,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Tioman": {
+  "name_cn": "刁曼岛",
+  "lat": 2.79,
+  "lon": 104.17,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Perhentian": {
+  "name_cn": "停泊岛",
+  "lat": 5.9,
+  "lon": 102.72,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Komodo": {
+  "name_cn": "科莫多岛",
+  "lat": -8.59,
+  "lon": 119.44,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Raja Ampat": {
+  "name_cn": "四王群岛",
+  "lat": -0.5,
+  "lon": 130.5,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Sri Lanka": {
+  "name_cn": "斯里兰卡",
+  "lat": 7.87,
+  "lon": 80.77,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Socotra": {
+  "name_cn": "索科特拉岛",
+  "lat": 12.49,
+  "lon": 53.82,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Zanzibar": {
+  "name_cn": "桑给巴尔",
+  "lat": -6.16,
+  "lon": 39.2,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Madagascar": {
+  "name_cn": "马达加斯加",
+  "lat": -18.77,
+  "lon": 46.87,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Nosy Be": {
+  "name_cn": "诺西贝",
+  "lat": -13.32,
+  "lon": 48.27,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Praslin": {
+  "name_cn": "普拉兰岛",
+  "lat": -4.32,
+  "lon": 55.73,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "La Digue": {
+  "name_cn": "拉迪格岛",
+  "lat": -4.36,
+  "lon": 55.83,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Cape Verde": {
+  "name_cn": "佛得角",
+  "lat": 15.11,
+  "lon": -23.61,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Fernando de Noronha": {
+  "name_cn": "费尔南多迪诺罗尼亚",
+  "lat": -3.85,
+  "lon": -32.42,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Galapagos": {
+  "name_cn": "加拉帕戈斯",
+  "lat": -0.95,
+  "lon": -90.97,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Easter Island": {
+  "name_cn": "复活节岛",
+  "lat": -27.11,
+  "lon": -109.35,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Gotland": {
+  "name_cn": "哥特兰岛",
+  "lat": 57.5,
+  "lon": 18.55,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Faroe": {
+  "name_cn": "法罗群岛",
+  "lat": 61.89,
+  "lon": -6.91,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Shetland": {
+  "name_cn": "设得兰群岛",
+  "lat": 60.35,
+  "lon": -1.22,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Orkney": {
+  "name_cn": "奥克尼群岛",
+  "lat": 58.98,
+  "lon": -3.1,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Skye": {
+  "name_cn": "天空岛",
+  "lat": 57.36,
+  "lon": -6.25,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Bornholm": {
+  "name_cn": "博恩霍尔姆",
+  "lat": 55.13,
+  "lon": 14.92,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Vancouver Island": {
+  "name_cn": "温哥华岛",
+  "lat": 49.65,
+  "lon": -125.45,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Prince Edward Island": {
+  "name_cn": "爱德华王子岛",
+  "lat": 46.25,
+  "lon": -63.13,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Marthas Vineyard": {
+  "name_cn": "玛莎葡萄园",
+  "lat": 41.38,
+  "lon": -70.64,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Catalina": {
+  "name_cn": "卡特琳娜岛",
+  "lat": 33.39,
+  "lon": -118.42,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Tasmania": {
+  "name_cn": "塔斯马尼亚",
+  "lat": -42.0,
+  "lon": 146.8,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Kangaroo Island": {
+  "name_cn": "袋鼠岛",
+  "lat": -35.84,
+  "lon": 137.32,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Fraser Island": {
+  "name_cn": "弗雷泽岛",
+  "lat": -25.25,
+  "lon": 153.13,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Whitsundays": {
+  "name_cn": "圣灵群岛",
+  "lat": -20.27,
+  "lon": 148.98,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Rottnest": {
+  "name_cn": "罗特尼斯岛",
+  "lat": -32.0,
+  "lon": 115.5,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Waiheke": {
+  "name_cn": "怀赫科岛",
+  "lat": -36.8,
+  "lon": 175.1,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Ishigaki": {
+  "name_cn": "石垣岛",
+  "lat": 24.34,
+  "lon": 124.16,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Miyako": {
+  "name_cn": "宫古岛",
+  "lat": 24.8,
+  "lon": 125.32,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Yakushima": {
+  "name_cn": "屋久岛",
+  "lat": 30.34,
+  "lon": 130.51,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Naoshima": {
+  "name_cn": "直岛",
+  "lat": 34.46,
+  "lon": 133.99,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Hainan": {
+  "name_cn": "海南岛",
+  "lat": 19.2,
+  "lon": 109.7,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Penghu": {
+  "name_cn": "澎湖",
+  "lat": 23.57,
+  "lon": 119.58,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Andaman": {
+  "name_cn": "安达曼群岛",
+  "lat": 11.74,
+  "lon": 92.66,
+  "surface": "sand",
+  "biome": "island",
+  "vibe": "环海的蓝与慢日子",
+  "family": "海岛"
+ },
+ "Mount Bromo": {
+  "name_cn": "布罗莫火山",
+  "lat": -7.94,
+  "lon": 112.95,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Rinjani": {
+  "name_cn": "林贾尼火山",
+  "lat": -8.42,
+  "lon": 116.47,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Agung": {
+  "name_cn": "阿贡火山",
+  "lat": -8.34,
+  "lon": 115.51,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Batur": {
+  "name_cn": "巴杜尔火山",
+  "lat": -8.24,
+  "lon": 115.38,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Merapi": {
+  "name_cn": "默拉皮火山",
+  "lat": -7.54,
+  "lon": 110.45,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Semeru": {
+  "name_cn": "塞梅鲁火山",
+  "lat": -8.11,
+  "lon": 112.92,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Taal Volcano": {
+  "name_cn": "塔尔火山",
+  "lat": 14.01,
+  "lon": 120.99,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mayon Volcano": {
+  "name_cn": "马荣火山",
+  "lat": 13.26,
+  "lon": 123.69,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Aso": {
+  "name_cn": "阿苏火山",
+  "lat": 32.88,
+  "lon": 131.1,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Sakurajima": {
+  "name_cn": "樱岛火山",
+  "lat": 31.58,
+  "lon": 130.65,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Unzen": {
+  "name_cn": "云仙岳",
+  "lat": 32.76,
+  "lon": 130.3,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Popocatepetl": {
+  "name_cn": "波波卡特佩特",
+  "lat": 19.02,
+  "lon": -98.62,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Cotopaxi": {
+  "name_cn": "科托帕希",
+  "lat": -0.68,
+  "lon": -78.44,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Chimborazo": {
+  "name_cn": "钦博拉索",
+  "lat": -1.47,
+  "lon": -78.82,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Villarrica": {
+  "name_cn": "比亚里卡",
+  "lat": -39.42,
+  "lon": -71.94,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Osorno": {
+  "name_cn": "奥索尔诺",
+  "lat": -41.1,
+  "lon": -72.5,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Rainier": {
+  "name_cn": "雷尼尔山",
+  "lat": 46.85,
+  "lon": -121.76,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Hood": {
+  "name_cn": "胡德山",
+  "lat": 45.37,
+  "lon": -121.7,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Shasta": {
+  "name_cn": "沙斯塔山",
+  "lat": 41.41,
+  "lon": -122.19,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mauna Loa": {
+  "name_cn": "冒纳罗亚",
+  "lat": 19.47,
+  "lon": -155.59,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Haleakala": {
+  "name_cn": "哈雷阿卡拉",
+  "lat": 20.71,
+  "lon": -156.25,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Erebus": {
+  "name_cn": "埃里伯斯火山",
+  "lat": -77.53,
+  "lon": 167.17,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Hekla": {
+  "name_cn": "海克拉火山",
+  "lat": 63.99,
+  "lon": -19.67,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Katla": {
+  "name_cn": "卡特拉火山",
+  "lat": 63.63,
+  "lon": -19.06,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Stromboli": {
+  "name_cn": "斯特龙博利",
+  "lat": 38.79,
+  "lon": 15.21,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Cameroon": {
+  "name_cn": "喀麦隆山",
+  "lat": 4.22,
+  "lon": 9.17,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Nyiragongo": {
+  "name_cn": "尼拉贡戈",
+  "lat": -1.52,
+  "lon": 29.25,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Tongariro": {
+  "name_cn": "汤加里罗",
+  "lat": -39.13,
+  "lon": 175.64,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Ruapehu": {
+  "name_cn": "鲁阿佩胡",
+  "lat": -39.28,
+  "lon": 175.57,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "White Island": {
+  "name_cn": "白岛",
+  "lat": -37.52,
+  "lon": 177.18,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Taranaki": {
+  "name_cn": "塔拉纳基",
+  "lat": -39.3,
+  "lon": 174.06,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Yasur": {
+  "name_cn": "亚苏尔火山",
+  "lat": -19.53,
+  "lon": 169.44,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Mount Kilimanjaro": {
+  "name_cn": "乞力马扎罗",
+  "lat": -3.07,
+  "lon": 37.36,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Ol Doinyo Lengai": {
+  "name_cn": "伦盖火山",
+  "lat": -2.76,
+  "lon": 35.91,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "大地的心跳",
+  "family": "火山奇观"
+ },
+ "Angel Falls": {
+  "name_cn": "安赫尔瀑布",
+  "lat": 5.97,
+  "lon": -62.54,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Gullfoss": {
+  "name_cn": "黄金瀑布",
+  "lat": 64.33,
+  "lon": -20.12,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Dettifoss": {
+  "name_cn": "黛提瀑布",
+  "lat": 65.81,
+  "lon": -16.38,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Skogafoss": {
+  "name_cn": "斯科加瀑布",
+  "lat": 63.53,
+  "lon": -19.51,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Plitvice": {
+  "name_cn": "普利特维采湖群",
+  "lat": 44.87,
+  "lon": 15.61,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Yosemite Falls": {
+  "name_cn": "优胜美地瀑布",
+  "lat": 37.76,
+  "lon": -119.6,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Huangguoshu": {
+  "name_cn": "黄果树瀑布",
+  "lat": 25.99,
+  "lon": 105.67,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Detian Falls": {
+  "name_cn": "德天瀑布",
+  "lat": 22.86,
+  "lon": 106.72,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Hukou Falls": {
+  "name_cn": "壶口瀑布",
+  "lat": 36.13,
+  "lon": 110.45,
+  "surface": "water_fresh",
+  "biome": "waterfall",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Como": {
+  "name_cn": "科莫湖",
+  "lat": 46.0,
+  "lon": 9.27,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Garda": {
+  "name_cn": "加尔达湖",
+  "lat": 45.58,
+  "lon": 10.63,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Bled": {
+  "name_cn": "布莱德湖",
+  "lat": 46.36,
+  "lon": 14.09,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Ohrid": {
+  "name_cn": "奥赫里德湖",
+  "lat": 41.03,
+  "lon": 20.72,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Geneva": {
+  "name_cn": "日内瓦湖",
+  "lat": 46.43,
+  "lon": 6.55,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Lucerne": {
+  "name_cn": "卢塞恩湖",
+  "lat": 46.97,
+  "lon": 8.47,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Loch Ness": {
+  "name_cn": "尼斯湖",
+  "lat": 57.31,
+  "lon": -4.45,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Crater Lake": {
+  "name_cn": "火山口湖",
+  "lat": 42.94,
+  "lon": -122.1,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Tahoe": {
+  "name_cn": "太浩湖",
+  "lat": 39.1,
+  "lon": -120.03,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Louise": {
+  "name_cn": "路易斯湖",
+  "lat": 51.42,
+  "lon": -116.18,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Moraine Lake": {
+  "name_cn": "梦莲湖",
+  "lat": 51.32,
+  "lon": -116.19,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Tekapo": {
+  "name_cn": "特卡波湖",
+  "lat": -43.88,
+  "lon": 170.52,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Wanaka": {
+  "name_cn": "瓦纳卡湖",
+  "lat": -44.7,
+  "lon": 169.13,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Jiuzhaigou": {
+  "name_cn": "九寨沟",
+  "lat": 33.26,
+  "lon": 103.92,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Kanas": {
+  "name_cn": "喀纳斯湖",
+  "lat": 48.82,
+  "lon": 87.03,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Namtso": {
+  "name_cn": "纳木错",
+  "lat": 30.71,
+  "lon": 90.58,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Yamdrok": {
+  "name_cn": "羊卓雍错",
+  "lat": 28.97,
+  "lon": 90.4,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Tianchi": {
+  "name_cn": "长白山天池",
+  "lat": 42.01,
+  "lon": 128.06,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Toba": {
+  "name_cn": "多巴湖",
+  "lat": 2.61,
+  "lon": 98.79,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Atitlan": {
+  "name_cn": "阿蒂特兰湖",
+  "lat": 14.7,
+  "lon": -91.2,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Lake Baikal": {
+  "name_cn": "贝加尔湖",
+  "lat": 53.5,
+  "lon": 108.0,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Grand Canyon": {
+  "name_cn": "大峡谷",
+  "lat": 36.11,
+  "lon": -112.11,
+  "surface": "rock",
+  "biome": "canyon",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Antelope Canyon": {
+  "name_cn": "羚羊谷",
+  "lat": 36.86,
+  "lon": -111.37,
+  "surface": "rock",
+  "biome": "canyon",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Salar de Uyuni": {
+  "name_cn": "乌尤尼盐沼",
+  "lat": -20.13,
+  "lon": -67.49,
+  "surface": "bare",
+  "biome": "desert",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Sahara": {
+  "name_cn": "撒哈拉沙漠",
+  "lat": 23.42,
+  "lon": 25.66,
+  "surface": "sand",
+  "biome": "desert",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Wadi Rum": {
+  "name_cn": "瓦迪拉姆",
+  "lat": 29.58,
+  "lon": 35.42,
+  "surface": "sand",
+  "biome": "desert",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Pamukkale": {
+  "name_cn": "棉花堡",
+  "lat": 37.92,
+  "lon": 29.12,
+  "surface": "rock",
+  "biome": "spring",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Dead Sea": {
+  "name_cn": "死海",
+  "lat": 31.5,
+  "lon": 35.5,
+  "surface": "water_fresh",
+  "biome": "lake",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Geirangerfjord": {
+  "name_cn": "盖朗厄尔峡湾",
+  "lat": 62.1,
+  "lon": 7.21,
+  "surface": "rock",
+  "biome": "fjord",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Milford Sound": {
+  "name_cn": "米尔福德峡湾",
+  "lat": -44.67,
+  "lon": 167.93,
+  "surface": "rock",
+  "biome": "fjord",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Ngorongoro": {
+  "name_cn": "恩戈罗恩戈罗",
+  "lat": -3.22,
+  "lon": 35.54,
+  "surface": "rock",
+  "biome": "volcano",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Uluru": {
+  "name_cn": "乌鲁鲁",
+  "lat": -25.34,
+  "lon": 131.04,
+  "surface": "rock",
+  "biome": "desert",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Stonehenge": {
+  "name_cn": "巨石阵",
+  "lat": 51.18,
+  "lon": -1.83,
+  "surface": "grass",
+  "biome": "grassland",
+  "vibe": "天地的大手笔",
+  "family": "自然奇观"
+ },
+ "Machu Picchu": {
+  "name_cn": "马丘比丘",
+  "lat": -13.1631,
+  "lon": -72.545,
+  "surface": "rock",
+  "biome": "mountain",
+  "vibe": "云端的失落之城",
+  "family": "火山奇观"
+ },
+ "Taj Mahal": {
+  "name_cn": "泰姬陵",
+  "lat": 27.1751,
+  "lon": 78.0421,
+  "surface": "urban",
+  "biome": "city",
+  "vibe": "为爱而建的大理石",
+  "family": "城市"
+ },
+ "Petra": {
+  "name_cn": "佩特拉",
+  "lat": 30.3285,
+  "lon": 35.4444,
+  "surface": "rock",
+  "biome": "canyon",
+  "vibe": "玫瑰色的古城",
+  "family": "火山奇观"
+ },
+ "Chichen Itza": {
+  "name_cn": "奇琴伊察",
+  "lat": 20.6843,
+  "lon": -88.5678,
+  "surface": "rock",
+  "biome": "grassland",
+  "vibe": "玛雅的台阶金字塔",
+  "family": "火山奇观"
+ }
+}
