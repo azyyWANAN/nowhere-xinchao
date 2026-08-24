@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """乌有乡旅程档案 · 手机网页版"""
-import json, html, os, pathlib, re, time
+import json, html, os, pathlib, re, time, secrets
 from city_abbr import CITY_ABBR
 import threading
 from urllib.request import urlopen, Request
@@ -12,7 +12,7 @@ import datetime
 BASE = pathlib.Path(__file__).resolve().parent
 TPL = (BASE / "index.tpl.html").read_text(encoding="utf-8")
 NOWHERE_HOME = pathlib.Path(os.environ.get("NOWHERE_HOME", str(pathlib.Path.home() / ".nowhere")))
-KEY = os.environ.get("NOWHERE_VIEW_KEY", "")
+KEY = os.environ.get("NOWHERE_VIEW_KEY", "") or secrets.token_hex(16)
 USER_NAME = os.environ.get("USER_NAME", "烟烟")
 PORT = int(os.environ.get("NOWHERE_VIEW_PORT", "18082"))
 
@@ -52,25 +52,33 @@ def _load(name):
 
 
 def _dest_short(place):
-    """邮票上的目的地缩写：优先查内置表（全设备一致），英文名取词首字母。"""
+    """邮票上的目的地缩写（强制）：表优先；英文取词首字母；中文转拼音首字母。无中文出口。"""
     place = (place or "").strip()
+    if not place:
+        return ""
     if place in CITY_ABBR:
         return CITY_ABBR[place]
     _words = re.findall(r"[A-Za-z]+", place)
     if _words:
         return "".join(w[0].upper() for w in _words)[:4]
+    try:
+        from pypinyin import lazy_pinyin
+        _ab = "".join([p[0].upper() for p in lazy_pinyin(place) if p])
+        if _ab:
+            return _ab[:6]
+    except Exception:
+        pass
     return place
-    import re as _re
-    words = _re.findall(r"[A-Za-z]+", " ".join(parts))
-    if words:
-        return "".join(w[0].upper() for w in words)
-    return joined
 
 
 
-def _pc_music_html(place, book):
-    """明信片音乐条：按地点名查歌单，配好歌就显示播放条。"""
-    _m = (book or {}).get(place) or {}
+def _pc_music_html(place, book, idx=0, card_music=None):
+    """明信片音乐条：卡片自带音乐优先，否则按地点名查歌单；歌单可多首，按明信片序号轮换。"""
+    _m = card_music
+    if not _m:
+        _m = (book or {}).get(place) or {}
+    if isinstance(_m, list):
+        _m = _m[idx % len(_m)] if _m else {}
     if not _m.get("url"):
         return ""
     _url = _m["url"]
@@ -83,8 +91,17 @@ def _pc_music_html(place, book):
             '<div class="pc-music-t">' + esc(_m.get("title", "")) + ' · ' + esc(_m.get("artist", "")) + '</div>'
             '<audio controls preload="none" src="' + esc(_url) + '"></audio>' + _note_html + '</div>')
 
-def _classify(place):
-    """三连问：白名单城市 -> 城市词 -> 自然词 -> 脚下的地。返回(脚下, 标签)。"""
+def _classify(place, surface="", lat=0):
+    """脚下标签：先看地(surface)，再看极圈，最后才是人烟。"""
+    if abs(lat) >= 66.5:
+        return "极地", "极地"
+    _surf_label = {
+        "water_ocean": "海洋", "water": "水域", "ice": "冰原", "sand": "沙漠",
+        "grass": "草原", "snow": "雪原", "tundra": "苔原", "forest": "森林",
+        "rock": "岩地", "soil": "土地", "gravel": "砾地", "wetland": "湿地",
+    }
+    if surface in _surf_label:
+        return _surf_label[surface], _surf_label[surface]
     for w in CITY_WORDS:
         if w in place:
             return "城市", "城市"
@@ -190,7 +207,7 @@ def _find_roadnet(lat, lon):
 
 
 def _kick_roadnet(lat, lon):
-    """当前城市没有路网图：后台开画，画好刷新页面就能看见。防重复用标记文件。"""
+    """当前城市没有路网图：���台开画，画好刷新页面就能看见。防重复用标记文件。"""
     _d = pathlib.Path("/home/ubuntu/.nowhere/roadnet")
     try:
         _d.mkdir(parents=True, exist_ok=True)
@@ -279,7 +296,7 @@ def render():
     biome_cn = BIOME_CN.get(biome, biome)
     has_cn = any("一" <= ch <= "鿿" for ch in str(place))
     if has_cn:
-        _cs, _cb = _classify(str(place))
+        _cs, _cb = _classify(str(place), t.get("surface", ""), lat)
         if _cs:
             surface_cn, biome_cn = _cs, _cb
 
@@ -327,7 +344,7 @@ def render():
                 tstr = (dt + datetime.timedelta(hours=8)).strftime("%m/%d %H:%M")
             except Exception:
                 pass
-        _cs, _cb = _classify(name)
+        _cs, _cb = _classify(name, info.get("surface", ""), info.get("lat", 0))
         _surf_txt = _cs if _cs else SURFACE_CN.get(info.get('surface', ''), info.get('surface', ''))
         items.append((tstr, f"打开一扇门 → {name}（{_surf_txt}）"))
     narr = j.get("narrative") or {}
@@ -406,14 +423,14 @@ def render():
         _mi = (IMG_MAP or {}).get(pc.get("stamp", {}).get("place", "")) or ""
         if _mi:
             _fi = _mi
-        _img_html = f'<img class="pc-img" loading="lazy" src="/nwimg/{_fi.split("/")[-1]}?k=__KEY__" alt="明信片正面"/>' if _fi else ""
+        _img_html = f'<img class="pc-img" loading="lazy" src="/nwimg/{_fi.split("/")[-1]}?k=__KEY__&v=__V__" alt="明信片正面"/>' if _fi else ""
         _pm = pm_svg(idx, esc(st.get("place", "")), lt, st.get("lat", 0) or 0, st.get("lon", 0) or 0)
         return ('<div class="postcard"><div class="mail"><div class="pc-body">' + esc(pc.get("text", "")) +
                 '</div><div class="pc-side"><div class="stamp"><span class="air">AIR MAIL</span><span class="dest">' +
                 esc(_dest_short(st.get("place", ""))) + '</span></div>' + _pm + '</div></div>' + _img_html +
                 '<div class="pc-meta"><span>' + str(st.get("lat", "?")) + '°N, ' + str(st.get("lon", "?")) + '°E</span><span>' +
                 esc(st.get("weather", "")) + ' · ' + str(st.get("temp_c", "?")) + '°C</span></div>' +
-                _pc_music_html(pc.get("stamp", {}).get("place", ""), MUSIC_BOOK) + '</div>')
+                _pc_music_html(pc.get("stamp", {}).get("place", ""), MUSIC_BOOK, pc.get("id", 0), pc.get("music")) + '</div>')
 
     all_pcs = pcs.get("items", [])
     recent, older = all_pcs[-3:], all_pcs[:-3]
@@ -485,7 +502,7 @@ def render():
     _rn_path = _find_roadnet(lat, lon)
     if _rn_path is not None:
         roadnet_html = ('<div class="sec"><span class="name">城市路网</span><span class="tag">城写下的情书</span></div>'
-                        '<div class="mapcard"><img class="map-img" src="/nwroad/?lat=' + f"{lat:.4f}" + '&lon=' + f"{lon:.4f}" + '&k=__KEY__" alt="路网"/>'
+                        '<div class="mapcard"><img class="map-img" src="/nwroad/?lat=' + f"{lat:.4f}" + '&lon=' + f"{lon:.4f}" + '&k=__KEY__&v=__V__" alt="路网"/>'
                         '<div class="rn-caption">' + esc(_pick_city_letter(place)) + '</div>'
                         '<div class="mapnote">' + esc(place) + '</div></div>')
     else:
@@ -512,7 +529,7 @@ def render():
         roadnet_album = '<details class="shelf"><summary class="shelf-sum"><span class="ico">&#127808;</span>实景相册 · 沿途城的信（%d 封）</summary>' % len(_rn_items)
         for _name, _la, _lo, _key in _rn_items:
             _letter = _pick_city_letter(_name)
-            roadnet_album += ('<div class="rn-item"><img class="rn-thumb" src="/nwroad/?lat=%.4f&lon=%.4f&t=1&k=__KEY__" alt="路网"/>'
+            roadnet_album += ('<div class="rn-item"><img class="rn-thumb" src="/nwroad/?lat=%.4f&lon=%.4f&t=1&k=__KEY__&v=__V__" alt="路网"/>'
                               '<div class="rn-info"><div class="rn-name">%s</div><div class="rn-letter">%s</div></div></div>'
                               % (_la, _lo, esc(_name), esc(_letter)))
         roadnet_album += '</details>' 
